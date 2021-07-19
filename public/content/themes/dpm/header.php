@@ -11,7 +11,7 @@
 
 <body>
     <div class="header">
-        <img src="" alt="">
+    <img class="footer-logo" src="<?= get_theme_file_uri('assets/images/IMG_2821.png') ?>" alt="logo">
         <div class="header_nav">
             <ul class="header_ul">
                 <li>Accueil</li>
