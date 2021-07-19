@@ -1,15 +1,34 @@
 <?php
 
-namespace Dpm;
 
-// STEP WP PLUGIN  configuration du plugin
+namespace DPM;
 
 class Plugin
 {
+    public function __construct()
+    {
+        add_action(
+            'init',
+            [$this, 'createProjectCustomPostType']
+        );
+    }
 
-    /**
-     * @var Router
-     */
-    protected $router;
-    
-}
+    public function activate()
+    {
+        
+    }
+
+    public function deactivate()
+    {
+
+    }
+
+    public function createProjectCustomPostType()
+    {
+        register_post_type(
+            'project',
+            [
+                'label' => 'project'
+            ]
+        );
+    }
