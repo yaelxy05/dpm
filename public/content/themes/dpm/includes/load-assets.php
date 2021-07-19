@@ -26,6 +26,7 @@ function dpm_load_assets()
 // ==========================================================================================
 function dpm_supports() {
     add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
 }
 add_action('wp_enqueue_scripts', 'dpm_load_assets');
 add_action('after_setup_theme','dpm_supports');
