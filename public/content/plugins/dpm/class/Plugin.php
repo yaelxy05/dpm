@@ -15,12 +15,10 @@ class Plugin
 
     public function activate()
     {
-        
     }
 
     public function deactivate()
     {
-
     }
 
     public function createProjectCustomPostType()
@@ -28,7 +26,16 @@ class Plugin
         register_post_type(
             'project',
             [
-                'label' => 'project'
+                'label' => 'Project',
+                'public' => true,
+                'hierarchical' => false,
+                'supports' => [
+                    'title',
+                    'thumbnail',
+                    'editor',
+                ]
             ]
         );
+
     }
+}
