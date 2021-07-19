@@ -10,3 +10,14 @@
 </head>
 
 <body>
+    <div class="header">
+        <img src="" alt="">
+        <div class="header_nav">
+            <ul class="header_ul">
+                <li>Accueil</li>
+                <li>Fille</li>
+                <li>Garçon</li>
+                <li>Bébé</li>
+            </ul>
+        </div>
+    </div>
