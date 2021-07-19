@@ -15,5 +15,8 @@
         "gulp-sass-error": "^1.0.5",
         "gulp-uglify": "^3.0.2",
         "node-sass": "^4.13.1"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.3"
     }
 }
