@@ -9,8 +9,10 @@ Documentation: https://developer.wordpress.org/themes/basics/main-stylesheet-sty
 */
 @import 'base/reset';
 @import 'utils/variables';
+@import 'pages/navBar';
 body {
     //background: rgb(53, 30, 114);
     background:$color-background;
+    width: 100%;
 
 }
