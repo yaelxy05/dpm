@@ -8,7 +8,8 @@ function dpm_load_assets()
 {
     wp_enqueue_style(
         'styles',  // "nom du fichier css
-        get_theme_file_uri('assets/scss/dist/style.css') // chemin fichier pour dire à quel endroit est stocké le fichier
+        //get_theme_file_uri('assets/scss/dist/style.css') // chemin fichier pour dire à quel endroit est stocké le fichier
+        get_theme_file_uri('assets/css/style.css') 
     );
 
     wp_enqueue_script(
