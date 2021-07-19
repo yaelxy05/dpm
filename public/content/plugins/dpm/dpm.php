@@ -20,3 +20,4 @@ register_deactivation_hook(
     __FILE__,
     [$dpm, 'deactivate']
 );
+

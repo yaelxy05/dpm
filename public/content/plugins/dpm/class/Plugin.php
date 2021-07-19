@@ -1,5 +1,6 @@
 <?php
 
+
 namespace DPM;
 
 class Plugin
@@ -31,4 +32,3 @@ class Plugin
             ]
         );
     }
-}
