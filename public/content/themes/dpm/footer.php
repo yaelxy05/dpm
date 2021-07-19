@@ -1,6 +1,6 @@
 <footer class="section footer"> 
 
-    <img class="footer-logo" src="content/themes/dpm/assets/images/IMG_2820.png" alt="logo">
+    <img class="footer-logo" src="<?= get_theme_file_uri('assets/images/IMG_2820.png') ?>" alt="logo">
 
     <nav>
         <ul>
