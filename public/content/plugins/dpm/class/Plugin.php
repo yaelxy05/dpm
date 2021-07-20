@@ -3,6 +3,9 @@
 
 namespace DPM;
 
+use DPM\Router;
+
+
 class Plugin
 {
 
@@ -17,7 +20,7 @@ class Plugin
 
         /*$registration = new Registration();*/
 
-        /*$this->router = new Router();*/
+        //$this->router = new Router();
 
         // au moment de l'initialisation de worpress enregistrement du cpt "clothing"
         add_action(
