@@ -11,16 +11,32 @@ class Plugin
             'init',
             [$this, 'createProjectCustomPostType']
         );
+
+        add_action(
+            'init',
+            [$this, 'createTechnologyCustomTaxonomy']
+        );
     }
 
     public function activate()
     {
-        
     }
 
     public function deactivate()
     {
+    }
 
+    public function createTechnologyCustomTaxonomy()
+    {
+        register_taxonomy(
+            'technology',
+            ['project'],
+            [
+                'label' => 'Technology',
+                'hierarchical' => true,
+                'public' => true
+            ]
+        );
     }
 
     public function createProjectCustomPostType()
@@ -28,7 +44,16 @@ class Plugin
         register_post_type(
             'project',
             [
-                'label' => 'project'
+                'label' => 'Project',
+                'public' => true,
+                'hierarchical' => false,
+                'supports' => [
+                    'title',
+                    'thumbnail',
+                    'editor',
+                ]
             ]
         );
+
     }
+}
