@@ -15,7 +15,7 @@ class Plugin
     public function __construct()
     {
 
-        /*$registration = new Registration();*/
+        $registration = new Registration();
 
         /*$this->router = new Router();*/
 
@@ -48,6 +48,11 @@ class Plugin
         add_action(
             'init',
             [$this, 'createCommandCustomPostType']
+        );
+
+        add_action(
+            'init',
+            [$this, 'createUserProfileCustomPostType']
         );
     }
 
@@ -135,6 +140,24 @@ class Plugin
             'command',
             [
                 'label' => 'Command',
+                'public' => true,
+                'hierarchical' => false,
+                'supports' => [
+                    'title',
+                    'thumbnail',
+                    'editor',
+                ]
+            ]
+        );
+
+    }
+
+    public function createUserProfileCustomPostType()
+    {
+        register_post_type(
+            'user-profile',
+            [
+                'label' => 'User Profile',
                 'public' => true,
                 'hierarchical' => false,
                 'supports' => [
