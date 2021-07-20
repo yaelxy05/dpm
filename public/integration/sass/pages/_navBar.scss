@@ -6,12 +6,16 @@
     width: 100%;
     margin-bottom: 2rem;
 
-
     .header_logo {
         height: 10rem;
         width: 20rem;
         justify-content: flex-end;
         padding-top: 4.6rem;
+        @include for-phone-only {
+            height: 5rem;
+            width: 10rem;
+            margin-left: 1.5rem;
+        }
     }
 
     .header_wrapper {
@@ -20,6 +24,9 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        @include for-phone-only {
+            display: none;
+        }
 
         .header_login-li {
             @include flexcenter;
@@ -56,5 +63,73 @@
         }
     }
     
-    
+    .header_wrapper-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        
+        margin-top: 6.6rem;
+        height: 100vh;
+        width: 80%;
+
+        .header_burger-icon {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            margin-right: 2rem;
+           
+            span {
+                border-bottom: solid $color-border-bottom 2px;
+                width: 2rem;
+                padding-top: 0.7rem;
+                cursor: pointer;
+                transition: .5s ease-in-out;
+                @include for-tablet-portrait-up {
+                    display: none;
+                }       
+            }
+        }
+        .header_burger-icon.open span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+        }
+        
+        .header_nav-mobile {
+            animation: burgerAnimationToActive 0.5s ease-in-out;
+            display: none;
+            @include for-tablet-portrait-up {
+                display: none;
+            }
+        }
+
+        .active {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 75%;
+            height: 22rem;
+            padding: 0 2rem;
+            background: $color-girl-transparent;
+            z-index: 2;
+            
+            
+            @include for-tablet-portrait-up {
+                display: none;
+            }
+
+            li {
+                padding: 0.5rem;
+            }
+        }
+
+        @keyframes burgerAnimationToActive {
+            0% {
+                transform: translateX(25%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+    }
 }
