@@ -5,16 +5,49 @@ namespace DPM;
 
 class Plugin
 {
+
+    /**
+     * @var Router
+     */
+    protected $router;
+
+
     public function __construct()
     {
+
+        /*$registration = new Registration();*/
+
+        /*$this->router = new Router();*/
+
+        // au moment de l'initialisation de worpress enregistrement du cpt "clothing"
         add_action(
             'init',
-            [$this, 'createProjectCustomPostType']
+            [$this, 'createClothingCustomPostType']
         );
 
         add_action(
             'init',
-            [$this, 'createTechnologyCustomTaxonomy']
+            [$this, 'createColorCustomTaxonomy']
+        );
+
+        add_action(
+            'init',
+            [$this, 'createAgeCustomTaxonomy']
+        );
+
+        add_action(
+            'init',
+            [$this, 'createGenderCustomTaxonomy']
+        );
+
+        add_action(
+            'init',
+            [$this, 'createTypeCustomTaxonomy']
+        );
+
+        add_action(
+            'init',
+            [$this, 'createCommandCustomPostType']
         );
     }
 
@@ -26,25 +59,82 @@ class Plugin
     {
     }
 
-    public function createTechnologyCustomTaxonomy()
+    public function createColorCustomTaxonomy()
     {
         register_taxonomy(
-            'technology',
-            ['project'],
+            'color',
+            ['clothing'],
             [
-                'label' => 'Technology',
+                'label' => 'Color',
                 'hierarchical' => true,
                 'public' => true
             ]
         );
     }
 
-    public function createProjectCustomPostType()
+    public function createAgeCustomTaxonomy()
+    {
+        register_taxonomy(
+            'age',
+            ['clothing'],
+            [
+                'label' => 'Age',
+                'hierarchical' => true,
+                'public' => true
+            ]
+        );
+    }
+
+    public function createGenderCustomTaxonomy()
+    {
+        register_taxonomy(
+            'gender',
+            ['clothing'],
+            [
+                'label' => 'Gender',
+                'hierarchical' => true,
+                'public' => true
+            ]
+        );
+    }
+
+    public function createTypeCustomTaxonomy()
+    {
+        register_taxonomy(
+            'type',
+            ['clothing'],
+            [
+                'label' => 'Type',
+                'hierarchical' => true,
+                'public' => true
+            ]
+        );
+    }
+
+    public function createClothingCustomPostType()
     {
         register_post_type(
-            'project',
+            'clothing',
             [
-                'label' => 'Project',
+                'label' => 'Clothing',
+                'public' => true,
+                'hierarchical' => false,
+                'supports' => [
+                    'title',
+                    'thumbnail',
+                    'editor',
+                ]
+            ]
+        );
+
+    }
+
+    public function createCommandCustomPostType()
+    {
+        register_post_type(
+            'command',
+            [
+                'label' => 'Command',
                 'public' => true,
                 'hierarchical' => false,
                 'supports' => [
