@@ -11,6 +11,11 @@ class Plugin
             'init',
             [$this, 'createProjectCustomPostType']
         );
+
+        add_action(
+            'init',
+            [$this, 'createTechnologyCustomTaxonomy']
+        );
     }
 
     public function activate()
@@ -19,6 +24,19 @@ class Plugin
 
     public function deactivate()
     {
+    }
+
+    public function createTechnologyCustomTaxonomy()
+    {
+        register_taxonomy(
+            'technology',
+            ['project'],
+            [
+                'label' => 'Technology',
+                'hierarchical' => true,
+                'public' => true
+            ]
+        );
     }
 
     public function createProjectCustomPostType()
