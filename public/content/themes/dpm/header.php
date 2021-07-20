@@ -37,9 +37,9 @@
         <div class="header_wrapper-mobile">
             <div class="header_burger">
                 <div class="header_burger-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="line1"></span>
+                    <span class="line2"></span>
+                    <span class="line3"></span>
                 </div>
             </div>
             <div class="header_nav-mobile">
