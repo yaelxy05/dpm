@@ -34,4 +34,24 @@
                 </ul>
             </div>
         </div>
+        <div class="header_wrapper-mobile">
+            <div class="header_burger">
+                <div class="header_burger-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="header_nav-mobile active">
+                <ul class="header_ul">
+                    <li>Accueil</li>
+                    <li>Se connecter</li>
+                    <li>Créer un compte</li>
+                    <li>Fille</li>
+                    <li>Garçon</li>
+                    <li>Bébé</li>
+                    <li><i class="fas fa-shopping-cart"></i></li>
+                </ul>
+            </div>
+        </div>
     </div>
