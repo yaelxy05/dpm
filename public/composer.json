@@ -51,7 +51,6 @@
             "wp plugin install view-admin-as --activate",
             "wp plugin install jwt-authentication-for-wp-rest-api --activate",
 
-            "wp plugin install fakerpress --activate",
             "wp plugin install custom-post-type-ui --activate",
             "wp plugin install advanced-custom-fields --activate",
             "wp plugin install acf-to-rest-api --activate"

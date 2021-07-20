@@ -63,10 +63,9 @@ class UserController extends CoreController
         $this->show('views/user/home', [
             'currentUser' => $user,
             'profile' => $profile,
-            'lastname' => $lastname,
-            'firstname' => $firstname,
-            'phonenumber' => $phonenumber,
-            'address' => $address
+            'clothing' => $clothing,
+            'command' => $command,
+            'cart_products' => $cartProducts
 
         ]);
 
