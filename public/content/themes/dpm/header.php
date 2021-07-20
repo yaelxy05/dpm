@@ -42,7 +42,7 @@
                     <span></span>
                 </div>
             </div>
-            <div class="header_nav-mobile active">
+            <div class="header_nav-mobile">
                 <ul class="header_ul">
                     <li>Accueil</li>
                     <li>Se connecter</li>

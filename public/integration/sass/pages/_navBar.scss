@@ -88,7 +88,8 @@
             }
         }
         .header_nav-mobile {
-            display: none;
+            animation: burgerAnimationToInactive 0.5s ease forwards;
+
             @include for-tablet-portrait-up {
                 display: none;
             }
@@ -104,6 +105,8 @@
             padding: 0 2rem;
             background: $color-girl-transparent;
             z-index: 2;
+            animation: burgerAnimationToActive 0.5s ease-in-out forwards;
+            
             @include for-tablet-portrait-up {
                 display: none;
             }
@@ -112,5 +115,23 @@
                 padding: 0.5rem;
             }
         }
+
+        @keyframes burgerAnimationToActive {
+            0% {
+                transform: scaleX(0);
+            }
+            100% {
+                transform: scaleX(1);
+            }
+        }
+        @keyframes burgerAnimationToInactive {
+            0% {
+                transform: scaleX(1);
+            }
+            100% {
+                transform: scaleX(0);
+            }
+        }
+
     }
 }
