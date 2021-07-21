@@ -2,7 +2,7 @@
 
     <img class="footer-logo" src="<?= get_theme_file_uri('assets/images/IMG_2820.png') ?>" alt="logo">
 
-    <nav>
+    <nav class="footer-nav">
         <ul>
             <li><a href="#">Mentions légales</a></li>
             <li><a href="#">A propos</a></li>
