@@ -73,7 +73,7 @@ class Plugin
             'color',
             ['clothing'],
             [
-                'label' => 'Color',
+                'label' => 'Couleur',
                 'hierarchical' => true,
                 'public' => true
             ]
@@ -99,7 +99,7 @@ class Plugin
             'gender',
             ['clothing'],
             [
-                'label' => 'Gender',
+                'label' => 'Genre',
                 'hierarchical' => true,
                 'public' => true
             ]
@@ -124,7 +124,7 @@ class Plugin
         register_post_type(
             'clothing',
             [
-                'label' => 'Clothing',
+                'label' => 'Vêtements',
                 'public' => true,
                 'hierarchical' => false,
                 'supports' => [
@@ -142,7 +142,7 @@ class Plugin
         register_post_type(
             'command',
             [
-                'label' => 'Command',
+                'label' => 'Commande',
                 'public' => true,
                 'hierarchical' => false,
                 'supports' => [
