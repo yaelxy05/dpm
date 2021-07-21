@@ -16,6 +16,11 @@
             width: 10rem;
             margin-left: 1.5rem;
         }
+        @include for-tablet-portrait-up {
+            height: 7rem;
+            width: 15rem;
+            padding-top: 7.5rem;
+        }
     }
 
     .header_wrapper {
@@ -86,7 +91,10 @@
                 transition: .5s ease-in-out;
                 @include for-tablet-portrait-up {
                     display: none;
-                }       
+                } 
+                @include for-tablet-landscape-up {
+                    display: none;
+                }   
             }
         }
         .header_burger-icon.open span:nth-child(2) {
