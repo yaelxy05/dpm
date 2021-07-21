@@ -16,7 +16,6 @@ class Plugin
     {
 
         $registration = new Registration();
-
         /*$this->router = new Router();*/
 
         // au moment de l'initialisation de worpress enregistrement du cpt "clothing"
