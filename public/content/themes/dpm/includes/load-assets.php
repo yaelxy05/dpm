@@ -19,6 +19,14 @@ function dpm_load_assets()
         null,   
         true    // true pour dire que le javascript sera chargé à la fin de la balise <body>
     );
+
+    wp_enqueue_script(
+        'passwordConfirmation-js',  // "nom du fichier js
+        get_theme_file_uri('assets/js/password-confirmation.js'),
+        [],
+        null,   
+        true    // true pour dire que le javascript sera chargé à la fin de la balise <body>
+    );
 }
 
 // ==========================================================================================
