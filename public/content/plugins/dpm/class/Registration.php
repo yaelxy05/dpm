@@ -2,13 +2,18 @@
 
 namespace DPM;
 
-class registration 
+class Registration 
 {
     public function __construct()
     {
         add_action(
             'register_form',
             [$this, 'customizeForm']
+        );
+
+        add_action(
+            'registration_errors',
+            [$this, 'checkRegistration']
         );
     }
 
@@ -36,5 +41,10 @@ class registration
         
 
         echo $customFields;
+    }
+
+    public function checkRegistration()
+    {
+
     }
 }
