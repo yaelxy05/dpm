@@ -25,13 +25,10 @@
                 </ul>
             </div>
             <div class="header_nav">
-                <ul class="header_ul">
-                    <li>Accueil</li>
-                    <li>Fille</li>
-                    <li>Garçon</li>
-                    <li>Bébé</li>
-                    <li><i class="fas fa-shopping-cart"></i></li>
-                </ul>
+                    <?php wp_nav_menu([
+                     'theme_location' => 'header',
+                     'container' => false,
+                     'menu_class' => 'header_ul'])?>
             </div>
         </div>
         <div class="header_wrapper-mobile">
@@ -43,15 +40,11 @@
                 </div>
             </div>
             <div class="header_nav-mobile">
-                <ul class="header_ul">
-                    <li>Accueil</li>
-                    <li>Se connecter</li>
-                    <li>Créer un compte</li>
-                    <li>Fille</li>
-                    <li>Garçon</li>
-                    <li>Bébé</li>
-                    <li><i class="fas fa-shopping-cart"></i></li>
-                </ul>
+                
+                    <?php wp_nav_menu([
+                     'theme_location' => 'header-mobile',
+                     'container' => false,
+                     'menu_class' => 'header_ul']) ?>      
             </div>
         </div>
     </div>
