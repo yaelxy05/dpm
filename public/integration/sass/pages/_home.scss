@@ -6,12 +6,20 @@
 
     .main_box {
         flex-direction: column;
-        margin-left: 5rem;
         @include flexcenter;
         @include for-phone-only {
-            justify-content: center;
-            align-items: center;
             margin-left: 0;
+        }
+
+        .main_banner {
+            height: 15rem;
+            width: 80%;
+            @include for-tablet-portrait-up {
+                height: 10rem;
+            }
+            @include for-phone-only {
+                height: 10rem;
+            }
         }
 
         .main_h1 {
@@ -54,7 +62,67 @@
                 }
             }
         }
-        
+        .main_select--box {
+            width: 80%;
+            min-height: 90vh;
+            margin: 2rem 0;
+            @include for-tablet-portrait-up {
+                min-height: 80vh;
+            }
+            @include for-phone-only {
+                min-height: 60vh;
+            }
+
+            .main_select {
+                height:15rem;
+                display: flex;
+                @include for-phone-only {
+                    height: 10rem;
+                }
+                @include for-tablet-portrait-up {
+                    height: 12rem;
+                }
+
+                .main_img {
+                    background-image: cover;
+                    height: 15rem;
+                    width: 60%;
+                    @include for-phone-only {
+                        height: 10rem;
+                    }
+                    @include for-tablet-portrait-up {
+                        height: 12rem;
+                    }
+                }
+
+                .main_select--textbox {
+                    height: 15rem;
+                    width: 40%;
+                    color: $color-text-white;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    @include flexcenter;
+                    @include for-phone-only {
+                        height: 10rem;
+                    }
+                    @include for-tablet-portrait-up {
+                        height: 12rem;
+                    }
+                }
+
+                .girl--text {
+                    background: $color-girl;
+                }
+
+                .boy--text {
+                    background: $color-boy;
+                }
+
+                .baby--text {
+                    background: $color-baby;
+                }
+            }
+        }
     }
     
 }
