@@ -42,7 +42,7 @@
             margin-top: 2rem;
             margin-right: 1rem;
             padding: 0 0.5rem;
-
+            text-decoration: none;
             li {
                 padding-left: 0.5rem;
             }
@@ -59,11 +59,12 @@
                 justify-content: space-around;
                 align-items: flex-end;
                 border-bottom: solid $color-border-bottom 2px;
-                margin-left: 7rem;
-                
+                padding-bottom: 1rem;
+                margin-left: 7rem; 
         
-                li {
-                    padding: 1rem;
+                .header_link {
+                    color: $color-menu;
+                    text-decoration: none;
                 }
             }
         }
@@ -122,7 +123,10 @@
             background: $color-girl-transparent;
             z-index: 2;
             
-            
+            .header_link {
+                color: $color-menu;
+                text-decoration: none;
+            }
             @include for-tablet-portrait-up {
                 display: none;
             }
