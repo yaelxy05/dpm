@@ -5,11 +5,9 @@
     }
 
     .main_box {
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin-left: 5rem;
+        @include flexcenter;
         @include for-phone-only {
             justify-content: center;
             align-items: center;
@@ -22,10 +20,8 @@
             margin: 2rem;
         }
         .main_post {
-            display: flex;
-            justify-content: center;
+            @include flexcenter;
             flex-wrap: wrap;
-            align-items: center;
             width: 100%;
             @include for-phone-only {
                 flex-direction: column;
