@@ -7,7 +7,7 @@ get_header();
 <main class="main">
 
     <div class="main_box">
-        <h1 class="main_h1">Catégorie</h1>
+        <h1 class="main_h1"><?php single_cat_title('' , true )?></h1>
         <div class="main_post">
         
         <!-- loop for display post product -->
@@ -15,6 +15,7 @@ get_header();
     
             <div class="main_wrapper">
                 <!-- display of picture -->
+                <?php the_category()?>
                 <?php the_post_thumbnail('post-thumbnail', ['class' => 'main_img', 'alt'=> 'article-product'])?> 
                 <h2 class="main_h2"><?php the_title() ?></h2>
                 <!-- diplay of excerpt -->
