@@ -62,7 +62,67 @@
                 }
             }
         }
-        
+        .main_select--box {
+            width: 80%;
+            min-height: 90vh;
+            margin: 2rem 0;
+            @include for-tablet-portrait-up {
+                min-height: 80vh;
+            }
+            @include for-phone-only {
+                min-height: 60vh;
+            }
+
+            .main_select {
+                height:15rem;
+                display: flex;
+                @include for-phone-only {
+                    height: 10rem;
+                }
+                @include for-tablet-portrait-up {
+                    height: 12rem;
+                }
+
+                .main_img {
+                    background-image: cover;
+                    height: 15rem;
+                    width: 60%;
+                    @include for-phone-only {
+                        height: 10rem;
+                    }
+                    @include for-tablet-portrait-up {
+                        height: 12rem;
+                    }
+                }
+
+                .main_select--textbox {
+                    height: 15rem;
+                    width: 40%;
+                    color: $color-text-white;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    @include flexcenter;
+                    @include for-phone-only {
+                        height: 10rem;
+                    }
+                    @include for-tablet-portrait-up {
+                        height: 12rem;
+                    }
+                }
+
+                .girl--text {
+                    background: $color-girl;
+                }
+
+                .boy--text {
+                    background: $color-boy;
+                }
+
+                .baby--text {
+                    background: $color-baby;
+                }
+            }
+        }
     }
     
 }
