@@ -6,12 +6,20 @@
 
     .main_box {
         flex-direction: column;
-        margin-left: 5rem;
         @include flexcenter;
         @include for-phone-only {
-            justify-content: center;
-            align-items: center;
             margin-left: 0;
+        }
+
+        .main_banner {
+            height: 15rem;
+            width: 80%;
+            @include for-tablet-portrait-up {
+                height: 10rem;
+            }
+            @include for-phone-only {
+                height: 10rem;
+            }
         }
 
         .main_h1 {

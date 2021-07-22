@@ -8,7 +8,8 @@ get_header();
 <main class="main">
     
     <div class="main_box">
-        <h1 class="main_h1">Nouveautés</h1>
+    <img class="main_banner" src="<?= get_theme_file_uri('assets/images/banner/IMG_2825.png') ?>" alt="banner home pages">
+        <h1 class="main_h1">Nos coups de coeur du moment</h1>
         <div class="main_post">
         <!-- loop for display post product -->
         <?php while(have_posts()): the_post(); ?>
