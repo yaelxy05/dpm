@@ -24,6 +24,23 @@ get_header();
         <?php endwhile ?>
 
         </div>
+        <div class="sidebar">
+            <form>
+                Age
+                <label>
+                <input type="checkbox" name="age[]" value="toddler"> Toddler
+                </label>
+                <input type="checkbox" name="age[]" value="kid"> Kid
+                <br>
+                Type
+                <label>
+                <input type="checkbox" name="type[]" value="short"> Short
+                </label>
+                <input type="checkbox" name="type[]" value="robe"> Robe
+                <br>
+                <button>Filtrer</button>
+            </form>
+        </div>
     </div>
 </main>
 
