@@ -84,7 +84,6 @@
                 }
 
                 .main_img {
-                    background-image: cover;
                     height: 15rem;
                     width: 60%;
                     @include for-phone-only {
@@ -95,6 +94,23 @@
                     }
                 }
 
+                .main_img--girl {
+                    background-image: url('../images/banner/pexels-eren-li-7168995.jpg');
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                .main_img--boy {
+                    background-image: url('../images/banner/pexels-ketut-subiyanto-4545166.jpg');
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                .main_img--baby {
+                    background-image: url('../images/banner/pexels-pixabay-265987.jpg');
+                    background-size: cover;
+                    background-position: center;
+                }
                 .main_select--textbox {
                     height: 15rem;
                     width: 40%;

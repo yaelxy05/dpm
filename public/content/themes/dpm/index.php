@@ -29,19 +29,19 @@ get_header();
         <h1 class="main_h1">Découvrez notre sélection</h1>
         <div class="main_select--box">
             <div class="main_select girl">
-                <img class="main_img" src="<?= get_theme_file_uri('assets/images/banner/pexels-eren-li-7168995.jpg') ?>" alt="selection fille">
+                <div class="main_img main_img--girl"></div>
                 <div class="main_select--textbox girl--text">
                     <p class="main_select--text">fille</p>
                 </div>
             </div>
             <div class="main_select boy">
-                <img class="main_img" src="<?= get_theme_file_uri('assets/images/banner/pexels-ketut-subiyanto-4545166.jpg') ?>" alt="selection garçon">
+                <div class="main_img main_img--boy"></div>
                 <div class="main_select--textbox boy--text">
                     <p class="main_select--text">garçon</p>
                 </div>
             </div>
             <div class="main_select baby">
-                <img class="main_img" src="<?= get_theme_file_uri('assets/images/banner/pexels-pixabay-265987.jpg') ?>" alt="selection bébé">
+            <div class="main_img main_img--baby"></div>
                 <div class="main_select--textbox baby--text">
                     <p class="main_select--text">bébé</p>
                 </div>
