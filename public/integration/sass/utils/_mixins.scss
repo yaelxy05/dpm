@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+@mixin flexAroundCenter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @mixin for-phone-only {
     @media (max-width: 599px) { @content; }
   }
@@ -24,5 +30,8 @@
   color: $color-title;
   font-size: $gutter;
   margin: 2rem;
-  
+}
+
+@mixin borderBlack {
+  border: solid 1px $color-border-bottom;
 }
