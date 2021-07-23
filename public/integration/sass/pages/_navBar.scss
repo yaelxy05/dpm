@@ -45,6 +45,7 @@
             text-decoration: none;
             li {
                 padding-left: 0.5rem;
+                color: $color-menu;
             }
 
         }
@@ -65,7 +66,12 @@
                 .header_link {
                     color: $color-menu;
                     text-decoration: none;
+                    font-size: 1.5rem;
                 }
+                .icon {
+                    color: $color-menu;
+                }
+                
             }
         }
     }
