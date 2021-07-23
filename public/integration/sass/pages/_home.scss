@@ -17,9 +17,7 @@
         }
 
         .main_h1 {
-            color: $color-title;
-            font-size: $gutter;
-            margin: 2rem;
+            @include h1Main;
         }
         .main_post {
             @include flexcenter;

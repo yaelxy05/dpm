@@ -1,0 +1,6 @@
+.main {
+    @include flexcenter;
+    .main_h1 {
+        @include h1Main;
+    }
+}
