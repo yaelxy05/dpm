@@ -11,7 +11,7 @@ get_header();
 
 
         <div class="sidebar">
-            <h2>Filtrer les résultats</h2>
+           
             <form>
 
                 <div class="dropdown">
