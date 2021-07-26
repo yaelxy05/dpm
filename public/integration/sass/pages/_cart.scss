@@ -26,19 +26,32 @@
             margin: 1rem 0;
             @include for-phone-only {
                 flex-direction: column;
-                height: 19rem;
-                width: 10rem;
-                margin: 2rem 0;
+                justify-content: flex-start;
+                height: 25rem;
+                width: 12rem;
             }
 
+            p {
+                @include for-phone-only {
+                    padding-top: 1rem;
+                }
+            }
+            i {
+                @include for-phone-only {
+                    padding-top: 1rem;
+                }
+            }
             .cart_picture {
                 width: 6rem;
                 height: auto;
                 box-shadow: 4px 4px 3px rgba(94, 94, 94, 0.589);
                 @include for-phone-only {
-                    width: 10rem;
+                    width: 12rem;
                     box-shadow: none;
-                    border-radius: 5px;
+                    height: 16rem;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    align-items: flex-start;
                 }
             }
         }

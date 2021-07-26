@@ -14,10 +14,11 @@ const app = {
         app.burgerSelector.addEventListener('click', app.handleClick);
 
     },
+    // function for add class actived when user click on the burger 
     handleClick: function() {
         console.log('%c' + 'Click', 'color: #0bf; font-size: 1rem; background-color:#fff');
         const menuMobile = document.querySelector('.header_nav-mobile');
-        menuMobile.classList.toggle('active');
+        menuMobile.classList.toggle('actived');
         app.burgerSelector.classList.toggle('open');
         console.log(app.burgerSelector);
     }
