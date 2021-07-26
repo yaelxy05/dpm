@@ -19,7 +19,7 @@
         <div class="header_wrapper">
             <div class="header_login">
                 <ul class="header_login-li">
-                    <li>Se connecter</li>
+                    <li><a href=”http://localhost/apo/il-etait-plusieurs-doigts/public/connexion/”>Se connecter</a></li>
                     <li>/</li>
                     <li> Créer un compte</li>
                 </ul>
