@@ -54,6 +54,15 @@ class Registration
                 </td>
             </tr>
         </table>
+
+        <table class="form-table">
+            <tr>
+                <th><label for="address">Adresse</label></th>
+                <td>
+                    <input id="address" name="address" type="text" value="<?php echo esc_html( get_the_author_meta( 'address', $user->ID ) ); ?>">
+                </td>
+            </tr>
+        </table>
         <?php
         
     }
@@ -70,6 +79,8 @@ class Registration
         }
 
         update_user_meta( $user_id, 'phone_number', $_POST['phone_number'] );
+
+        update_user_meta( $user_id, 'address', $_POST['address'] );
 
     }
 
@@ -88,14 +99,14 @@ class Registration
             class="input" value="" size ="20" autocapitalize="off">
         </p>
         <p>
-            <label for="user_phonenumber">N de téléphone</label>
+            <label for="user_phonenumber">Téléphone</label>
             <input type="phonenumber" name="user_phonenumber" id="user_phonenumber"
             class="input" value="" size ="20" autocapitalize="off">
         </p>
        
         <p>
-            <label for="user_adress">Adresse *</label>
-            <input required type="adress" name="user_adress" id="user_adress"
+            <label for="user_address">Adresse *</label>
+            <input required type="address" name="user_address" id="user_address"
             class="input" value="" size ="20" autocapitalize="off">
         </p>
         <p>
@@ -144,9 +155,15 @@ class Registration
         $phoneNumber = filter_input(INPUT_POST, 'user_phonenumber');
         update_user_meta( $userId, 'phone_number', $phoneNumber );
 
+        // Get the address and use update post meta for this user
+        $address = filter_input(INPUT_POST, 'user_address');
+        update_user_meta( $userId, 'address', $address );
+
         // enregistrement du mot de passe choisi par l'user
         $password = filter_input(INPUT_POST, 'user_password');
         wp_set_password($password, $userId); 
+
+        
     }
 
 }
