@@ -35,3 +35,11 @@
 @mixin borderBlack {
   border: solid 1px $color-border-bottom;
 }
+
+@mixin buttonGreen {
+  background-color: rgb(26, 131, 43);
+  color: $color-text-white;
+  font-weight: bold;
+  border: none;
+  font-size: 1rem;
+}
