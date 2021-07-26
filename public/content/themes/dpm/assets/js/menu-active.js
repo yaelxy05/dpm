@@ -28,8 +28,12 @@ const menu = {
         // we target the current element who have the class active
         const currentLink = document.querySelector('.menu-item.active');
         // if he have the class active we remove the classe active and else we add to the class menu-item
-        currentLink.classList.remove('active');
-        clickedButton.classList.add('active');
+        if (currentLink.classList.contains('active')) {
+            currentLink.classList.remove('active');
+        }
+        else {
+            clickedButton.classList.add('active');
+        }
     }
 };
 
