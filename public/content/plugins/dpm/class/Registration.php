@@ -32,14 +32,40 @@ class Registration
             'show_user_profile', 
             [$this, 'show_extra_profile_fields']
         );
+        
         add_action( 
             'edit_user_profile', 
             [$this, 'show_extra_profile_fields']
         );
         
+        add_action(
+            'login_enqueue_scripts',
+            [$this, 'customizeCSSS']
+        );
+
         // Hooks to save custom fields data on profil page
         add_action( 'personal_options_update', [$this, 'save_extra_profile_fields']);
         add_action( 'edit_user_profile_update', [$this, 'save_extra_profile_fields']);
+    }
+
+    public function customizeCSSS() {
+
+        wp_enqueue_style(
+            'custom-login',
+            get_theme_file_uri('assets/css/register.css')
+        );
+        /*
+        echo '
+            <style type="text/css">
+                body {
+                    background: black !important;
+                }
+                .login h1 a {
+                    background-image: none !important;
+                }
+            </style>
+        ';
+        */
     }
 
     public function show_extra_profile_fields($user) {
@@ -134,6 +160,19 @@ class Registration
             );
         }
 
+        // Recuperation du numéro de téléphone de l'utilisateur
+        // recovery phone number user
+        $phoneNumber = filter_input(INPUT_POST, 'user_phonenumber');
+        // s'il y a pas de numero de téléphone, il faut enregistrer une erreur
+        if(!$this->checkPhoneNumber($phoneNumber)) {
+            $errors->add(
+                // identifiant de l'erreur
+                'user_phonenumber_invalid',
+                // message d'erreur
+                'Votre numéro de téléphone est invalide'
+            );
+        }
+
         return $errors;
     }
 
@@ -147,6 +186,18 @@ class Registration
         return true;
 
     }
+
+    public function checkPhoneNumber($phoneNumber)
+    {
+        // the phone number must have 10 caracters
+        if(mb_strlen($phoneNumber) < 10) {
+            return false;
+        }
+
+        return true;
+
+    }
+
 
     // customisation de l'enregistrement de l'utilisateur
     public function customUserRegistration($userId)
