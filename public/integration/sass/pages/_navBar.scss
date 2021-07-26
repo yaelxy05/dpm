@@ -82,6 +82,9 @@
                     a {
                         color: $color-title;
                     }
+                    @include for-phone-only {
+                        display: none;
+                    }
                 }
             }
         }
@@ -129,7 +132,7 @@
             }
         }
 
-        .active {
+        .actived {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
