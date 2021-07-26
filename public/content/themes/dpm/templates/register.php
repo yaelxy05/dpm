@@ -23,7 +23,7 @@ get_header();
             <input id="phone" type="text" name="phone" placeholder="Téléphone">
         </div>
         <div class="main_input address">
-            <input id="address" type="text" name="address" placeholder="Adresse de livraison">
+            <input id="address" type="text" name="address" placeholder="Adresse">
         </div>
         <div class="main_input password">
             <input id="password" type="password" name="password" placeholder="Mot de passe">
