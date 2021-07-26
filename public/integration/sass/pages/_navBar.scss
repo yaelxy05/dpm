@@ -46,7 +46,6 @@
             text-decoration: none;
             li {
                 padding-left: 0.5rem;
-                color: $color-menu;
 
                 a {
                     text-decoration: none;
@@ -77,6 +76,13 @@
                 }
                 .icon {
                     color: $color-menu;
+                }
+
+                .menu-item.active{
+                    a {
+                        color: $color-title;
+                    }
+                    
                 }
                 
             }
