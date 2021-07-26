@@ -19,9 +19,6 @@ get_header();
         <div class="main_input lastname">
             <input id="lastname" type="text" name="lastname" placeholder="Prénom">
         </div>
-        <div class="main_input lastname">
-            <input id="lastname" type="text" name="lastname" placeholder="Prénom">
-        </div>
         <div class="main_input phone">
             <input id="phone" type="text" name="phone" placeholder="Téléphone">
         </div>
