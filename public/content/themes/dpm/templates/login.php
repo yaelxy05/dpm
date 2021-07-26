@@ -10,10 +10,10 @@ get_header();
 <main class="main">
     <h1 class="main_h1">Connexion</h1>
     <div class="main_input-box">
-        <div class="main_input-name">
-            <input id="username" type="text" name="username" placeholder="Nom d'utilisateur">
+        <div class="main_input name">
+            <input id="email" type="email" name="email" placeholder="Email">
         </div>
-        <div class="main_input-password">
+        <div class="main_input password">
             <input id="password" type="password" name="password" placeholder="Mot de passe">
         </div>
         <div class="main_loginBottom-box">

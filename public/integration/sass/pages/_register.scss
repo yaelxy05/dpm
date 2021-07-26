@@ -12,7 +12,7 @@
         margin: $gutter  0;
     }
 
-    .main_input-box {
+    .main_register--input-box {
         background-color: $background-input;
         border-radius: 10px;
         display: flex;
@@ -20,7 +20,7 @@
         justify-content: center;
         align-items: center;
         width: 25rem;
-        height: 25rem;
+        min-height: 80vh;
         margin: $gutter  0;
         @include for-phone-only {
             width: 13rem;
