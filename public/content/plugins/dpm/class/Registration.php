@@ -52,20 +52,9 @@ class Registration
 
         wp_enqueue_style(
             'custom-login',
-            get_theme_file_uri('assets/css/register.css')
+            get_theme_file_uri('assets/css/style.css')
         );
-        /*
-        echo '
-            <style type="text/css">
-                body {
-                    background: black !important;
-                }
-                .login h1 a {
-                    background-image: none !important;
-                }
-            </style>
-        ';
-        */
+        
     }
 
     public function show_extra_profile_fields($user) {
