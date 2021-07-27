@@ -15,7 +15,105 @@ body {
             }
            
         }
+        #registerform {
+            background-color: $background-input;
+            border:none;
+            border-radius: 10px;
+            
+            input {
+                &:focus {
+                    box-shadow: none;
+                }
+            }
 
+            p {
+                label {
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                }
+                input {
+                    height: 2.3rem;
+                    border: none;
+                    border-bottom: solid 3px rgb(192, 192, 192);
+                    border-radius: 10px;
+                    padding-left: 0.5rem;
+                    
+
+                
+                    &::placeholder {
+                        font-weight: bold;
+                        color: $color-placeholder;
+                    }
+                
+                    &:focus {
+                        outline: none;
+                        border-bottom: solid 3px $color-girl;
+                    }
+                }
+            }
+
+            .user-pass-wrap {
+                label {
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                }
+                #user_pass {
+                    height: 2.3rem;
+                    border: none;
+                    border-bottom: solid 3px rgb(192, 192, 192);
+                    border-radius: 10px;
+                    padding-left: 0.5rem;
+
+                
+                    &::placeholder {
+                        font-weight: bold;
+                        color: $color-placeholder;
+                    }
+                
+                    &:focus {
+                        outline: none;
+                        border-bottom: solid 3px $color-girl;
+                    }
+                }
+                button {
+                    textarea {
+                        &:focus {
+                            outline: none!important;
+                            border-bottom: solid 3px $color-girl;
+                            background-color: white;
+                            color: rgb(255, 255, 255)!important;
+                        }
+                    }
+                    
+                    
+                    .dashicons-visibility {
+                        color: $color-menu;
+                    }
+                }
+                textarea {
+                    &:focus {
+                        color: none;
+                        outline: none!important;
+                        border-color: none!important;
+                        box-shadow: none;
+                    }
+                }
+            }
+            .forgetmenot {
+                #rememberme {
+                    &:focus {
+                        outline: none;
+                        border: solid 3px $color-girl;
+                    }
+                    
+                }
+            }
+            .submit {
+                input {
+                    @include buttonGreen;
+                }
+            }
+        }
         #loginform {
             background-color: $background-input;
             border:none;
