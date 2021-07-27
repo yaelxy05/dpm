@@ -10,6 +10,7 @@ get_header();
 <main class="main">
     <h1 class="main_h1">Inscription</h1>
     <div class="main_register--input-box">
+        <form action="" method="post">
         <div class="main_input email">
             <input id="email" type="email" name="email" placeholder="Email">
         </div>
@@ -34,6 +35,7 @@ get_header();
         <div class="main_loginBottom-box">
             <button id="button_connexion" type="submit" value="Envoyer">Envoyer</button>
         </div>
+        </form>
     </div>
 </main>
 <?php
