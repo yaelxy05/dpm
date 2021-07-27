@@ -98,18 +98,18 @@ class Registration
     {
         $customFields = '
         <p>
-            <label for="user_lastname">Nom</label>
-            <input type="lastname" name="user_lastname" id="user_lastname"
+            <label for="user_lastname">Nom *</label>
+            <input required type="lastname" name="user_lastname" id="user_lastname"
             class="input" value="" size ="20" autocapitalize="off">
         </p>
         <p>
-            <label for="user_firstname">Prénom</label>
-            <input type="firstname" name="user_firstname" id="user_firstname"
+            <label for="user_firstname">Prénom *</label>
+            <input required type="firstname" name="user_firstname" id="user_firstname"
             class="input" value="" size ="20" autocapitalize="off">
         </p>
         <p>
-            <label for="user_phonenumber">Téléphone</label>
-            <input type="phonenumber" name="user_phonenumber" id="user_phonenumber"
+            <label for="user_phonenumber">Téléphone *</label>
+            <input required type="phonenumber" name="user_phonenumber" id="user_phonenumber"
             class="input" value="" size ="20" autocapitalize="off">
         </p>
        
@@ -119,8 +119,8 @@ class Registration
             class="input" value="" size ="20" autocapitalize="off">
         </p>
         <p>
-            <label for="user_password">Mot de passe</label>
-            <input type="password" name="user_password" id="user_password"
+            <label for="user_password">Mot de passe *</label>
+            <input required type="password" name="user_password" id="user_password"
             class="input" value="" size ="20" autocapitalize="off">
         </p>
         ';  
