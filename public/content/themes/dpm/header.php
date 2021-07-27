@@ -21,7 +21,7 @@
                 <ul class="header_login-li">
                     <li><a href=”http://localhost/apo/il-etait-plusieurs-doigts/public/connexion/”>Se connecter</a></li>
                     <li>/</li>
-                    <li><a href="http://localhost/apo/il-etait-plusieurs-doigts/public/inscription/"> Créer un compte</a></li>
+                    <li><a href="<?php echo wp_registration_url(); ?>"> Créer un compte</a></li>
                 </ul>
             </div>
             <div class="header_nav">

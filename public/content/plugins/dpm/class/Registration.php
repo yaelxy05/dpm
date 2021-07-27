@@ -38,24 +38,18 @@ class Registration
             [$this, 'show_extra_profile_fields']
         );
         
-        add_action(
-            'login_enqueue_scripts',
-            [$this, 'customizeCSSS']
-        );
 
         // Hooks to save custom fields data on profil page
-        add_action( 'personal_options_update', [$this, 'save_extra_profile_fields']);
-        add_action( 'edit_user_profile_update', [$this, 'save_extra_profile_fields']);
-    }
-
-    public function customizeCSSS() {
-
-        wp_enqueue_style(
-            'custom-login',
-            get_theme_file_uri('assets/css/style.css')
+        add_action( 
+            'personal_options_update', 
+            [$this, 'save_extra_profile_fields']
         );
-        
+        add_action( 
+            'edit_user_profile_update', 
+            [$this, 'save_extra_profile_fields']
+        );
     }
+
 
     public function show_extra_profile_fields($user) {
         ?>
