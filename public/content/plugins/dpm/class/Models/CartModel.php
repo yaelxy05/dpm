@@ -12,7 +12,7 @@ class CartModel extends CoreModel
         // STEP WP CUSTOMTABLE : Create table in a Database
 
         $sql = "
-            CREATE TABLE `cart` (
+            CREATE TABLE `cart_products` (
                 `user_id` bigint(24) unsigned NOT NULL,
                 `product_id` bigint(24) unsigned NOT NULL,
                 `created_at` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP,
@@ -25,7 +25,7 @@ class CartModel extends CoreModel
 
     public function dropTable()
     {
-        $sql = "DROP TABLE `cart`";
+        $sql = "DROP TABLE `cart_products`";
         $this->database->query($sql);
     }
 
@@ -95,7 +95,7 @@ class CartModel extends CoreModel
         foreach($rows as $values) {
             // Récupération du post
             $product = get_post($values->product_id, 'product');
-            $projects[] =  $product;
+            $products[] =  $product;
         }
 
         return $products;
