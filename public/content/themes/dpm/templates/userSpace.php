@@ -18,14 +18,14 @@ get_header();
             </div>
             <button>+ Ajoutez un produit</button>
             <div class="main_dataUser">
-            <h2 class="main_info">informations du compte</h2>
-            <div class="main_boxP">
-                <p>Nom</p>
-                <p>Email</p>
-                <p>Numéro de téléphone</p>
-                <p>Adresse</p>
+                <h2 class="main_info">Informations du compte</h2>
+                <div class="main_boxP">
+                    <p>Nom</p>
+                    <p>Email</p>
+                    <p>Numéro de téléphone</p>
+                    <p>Adresse</p>
+                </div>
             </div>
-        </div>
         </div>
         
     </main>

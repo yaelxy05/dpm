@@ -1,86 +1,118 @@
-.main {
-    min-height: 100%;
+@import 'base/reset';
+@import 'utils/variables';
+@import 'utils/mixins';
+
+
+body {
+    background:$color-background;
     @include flexcenter;
-    flex-direction: column;
-    margin: $gutter +4  0;
-    @include for-phone-only {
-        margin: 2rem 0;
-    }
 
-    .main_h1 {
-        @include h1Main;
-        margin: $gutter  0;
-    }
-
-    .main_input-box {
-        background-color: $background-input;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 25rem;
-        height: 25rem;
-        margin: $gutter  0;
-        @include for-phone-only {
-            width: 13rem;
+    #login {
+        h1 {
+            a {
+                background-image: url('../images/IMG_2820.png');
+                margin-bottom: 2rem;
+            }
+           
         }
 
-        .main_input{
-            display: flex;
-            flex-direction: column;
-            margin: 1rem 0;
-
+        #loginform {
+            background-color: $background-input;
+            border:none;
+            border-radius: 10px;
+            
             input {
-                height: 2.3rem;
-                width: 20rem;
-                border: none;
-                border-bottom: solid 3px rgb(192, 192, 192);
-                padding-left: 0.5rem;
-                
-                @include for-phone-only {
-                    width: 10rem;
-                }
-
-                &::placeholder {
-                    font-weight: bold;
-                    color: $color-placeholder;
-                }
-
                 &:focus {
-                    outline: none;
-                    border-bottom: solid 3px $color-girl;
-                }
-            }
-        }
-
-        .main_loginBottom-box {
-            display: flex;
-            justify-content: space-evenly;
-            width: 20rem;
-            padding: 1rem 0 0;
-            @include for-phone-only {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 10rem;
-            }
-
-            .main_link {
-                font-weight: bold;
-                flex: 2;
-
-                p {
-                    padding: 0.5rem 0;
+                    box-shadow: none;
                 }
             }
 
-            #button_connexion {
-                height: 3.4rem;
-                width: 7.3rem;
-                margin-top: 0.8rem;
-                border-radius: 5px;
-                @include buttonGreen;
+            p {
+                label {
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                }
+                #user_login {
+                    height: 2.3rem;
+                    border: none;
+                    border-bottom: solid 3px rgb(192, 192, 192);
+                    border-radius: 10px;
+                    padding-left: 0.5rem;
+                    
+
+                
+                    &::placeholder {
+                        font-weight: bold;
+                        color: $color-placeholder;
+                    }
+                
+                    &:focus {
+                        outline: none;
+                        border-bottom: solid 3px $color-girl;
+                    }
+                }
+            }
+
+            .user-pass-wrap {
+                label {
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                }
+                #user_pass {
+                    height: 2.3rem;
+                    border: none;
+                    border-bottom: solid 3px rgb(192, 192, 192);
+                    border-radius: 10px;
+                    padding-left: 0.5rem;
+
+                
+                    &::placeholder {
+                        font-weight: bold;
+                        color: $color-placeholder;
+                    }
+                
+                    &:focus {
+                        outline: none;
+                        border-bottom: solid 3px $color-girl;
+                    }
+                }
+                button {
+                    textarea {
+                        &:focus {
+                            outline: none!important;
+                            border-bottom: solid 3px $color-girl;
+                            background-color: white;
+                            color: rgb(255, 255, 255)!important;
+                        }
+                    }
+                    
+                    
+                    .dashicons-visibility {
+                        color: $color-menu;
+                    }
+                }
+                textarea {
+                    &:focus {
+                        color: none;
+                        outline: none!important;
+                        border-color: none!important;
+                        box-shadow: none;
+                    }
+                }
+            }
+            .forgetmenot {
+                #rememberme {
+                    &:focus {
+                        outline: none;
+                        border: solid 3px $color-girl;
+                    }
+                    
+                }
+            }
+            .submit {
+                input {
+                    @include buttonGreen;
+                }
             }
         }
     }
