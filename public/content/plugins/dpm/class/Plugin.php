@@ -50,6 +50,11 @@ class Plugin
 
         add_action(
             'init',
+            [$this, 'createCrushCustomTaxonomy']
+        );
+
+        add_action(
+            'init',
             [$this, 'createCommandCustomPostType']
         );
 
@@ -57,6 +62,7 @@ class Plugin
             'init',
             [$this, 'createUserProfileCustomPostType']
         );
+
     }
 
     public function activate()
@@ -113,6 +119,19 @@ class Plugin
             ['clothing'],
             [
                 'label' => 'Type',
+                'hierarchical' => true,
+                'public' => true
+            ]
+        );
+    }
+
+    public function createCrushCustomTaxonomy()
+    {
+        register_taxonomy(
+            'crush',
+            ['clothing'],
+            [
+                'label' => 'Coup de coeur',
                 'hierarchical' => true,
                 'public' => true
             ]
