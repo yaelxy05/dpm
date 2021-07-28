@@ -10,13 +10,13 @@ get_header();
         <h1 class="main_h1"><?php single_cat_title('', true) ?></h1>
 
 
-        <!--<div id="sidebar">
+        <div id="sidebar">
            
             <form>
 
                 <div class="filter">
-                    <h3>Age</h3>
-                    <div class="product-list">
+                <button class="dropdown-btn">Age</button>
+                    <div class="dropdown-container">
                         <ul>
                             <li><input type="checkbox" name="age[]" value="0-mois">0 mois</li>
                             <li><input type="checkbox" name="age[]" value="1-mois">1 mois</li>
@@ -40,8 +40,8 @@ get_header();
                 </div>
 
                 <div class="filter">
-                 <h3>Type</h3>
-                    <div class="product-list">
+                <button class="dropdown-btn">Type</button>
+                    <div class="dropdown-container">
                         <ul>
                             <li><input type="checkbox" name="type[]" value="hauts-t-shirt">Hauts – T-shirts</li>
                             <li><input type="checkbox" name="type[]" value="pulls-gilets-sweats	">Pulls – Gilets – Sweats</li>
@@ -59,9 +59,8 @@ get_header();
 
                 <button>Filtrer</button>
             </form>
-        </div> -->
-        
-
+        </div> 
+    
 
         <div class="main_post">
 
@@ -86,3 +85,4 @@ get_header();
 
 <?php
 get_footer(); ?>
+
