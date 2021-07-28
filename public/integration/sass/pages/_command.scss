@@ -1,0 +1,56 @@
+.main {
+    min-height: 100%;
+    @include flexcenter;
+    flex-direction: column;
+    margin: $gutter +4  0;
+
+    .main_h1 {
+        @include h1Main;
+        margin: $gutter  0;
+    }
+
+    .main_wrapper {
+        @include flexcenter;
+        flex-direction: column;
+        width: 100%;
+        margin: $gutter  0;
+        
+
+        .command_product {
+            @include flexAroundCenter;
+            height: 10rem;
+            width: 100%;
+            border-bottom: 1px solid rgba(53, 44, 133, 0.137);
+            background-color: $background-input;
+            border-radius: 10px;
+            margin: 2rem 0;
+            padding: 0.2rem 2rem;
+            @include for-phone-only {
+                flex-direction: column;
+                justify-content: flex-start;
+                height: 25rem;
+                width: 12rem;
+            }
+
+            p {
+                padding: 0 2rem;
+                @include for-phone-only {
+                    padding-top: 1rem;
+                }
+            }
+            .command_picture {
+                width: 6rem;
+                height: auto;
+                box-shadow: 4px 4px 3px rgba(94, 94, 94, 0.589);
+                @include for-phone-only {
+                    width: 12rem;
+                    box-shadow: none;
+                    height: 16rem;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    align-items: flex-start;
+                }
+            }
+        }
+    } 
+}
