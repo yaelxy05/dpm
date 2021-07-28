@@ -50,6 +50,11 @@ class Plugin
 
         add_action(
             'init',
+            [$this, 'createCrushCustomTaxonomy']
+        );
+
+        add_action(
+            'init',
             [$this, 'createCommandCustomPostType']
         );
 
@@ -57,6 +62,7 @@ class Plugin
             'init',
             [$this, 'createUserProfileCustomPostType']
         );
+
     }
 
     public function activate()
@@ -119,6 +125,19 @@ class Plugin
         );
     }
 
+    public function createCrushCustomTaxonomy()
+    {
+        register_taxonomy(
+            'crush',
+            ['clothing'],
+            [
+                'label' => 'Coup de coeur',
+                'hierarchical' => true,
+                'public' => true
+            ]
+        );
+    }
+
     public function createClothingCustomPostType()
     {
         register_post_type(
@@ -127,6 +146,7 @@ class Plugin
                 'label' => 'Vêtements',
                 'public' => true,
                 'hierarchical' => false,
+                'menu_icon' => 'dashicons-universal-access-alt',
                 'supports' => [
                     'title',
                     'thumbnail',
@@ -145,6 +165,7 @@ class Plugin
                 'label' => 'Commande',
                 'public' => true,
                 'hierarchical' => false,
+                'menu_icon' => 'dashicons-cart',
                 'supports' => [
                     'title',
                     'thumbnail',
@@ -163,6 +184,7 @@ class Plugin
                 'label' => 'User Profile',
                 'public' => true,
                 'hierarchical' => false,
+                'menu_icon' => 'dashicons-businesswoman',
                 'supports' => [
                     'title',
                     'thumbnail',
@@ -171,5 +193,5 @@ class Plugin
             ]
         );
 
-    }
+    } 
 }

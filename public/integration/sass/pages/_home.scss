@@ -12,20 +12,12 @@
         }
 
         .main_banner {
-            height: 15rem;
+            height: auto;
             width: 80%;
-            @include for-tablet-portrait-up {
-                height: 10rem;
-            }
-            @include for-phone-only {
-                height: 10rem;
-            }
         }
 
         .main_h1 {
-            color: $color-title;
-            font-size: $gutter;
-            margin: 2rem;
+            @include h1Main;
         }
         .main_post {
             @include flexcenter;

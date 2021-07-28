@@ -3,12 +3,19 @@ img.footer-logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    @include for-desktop-up {
+        width: 10%;
+    }
+    @include for-tablet-portrait-up {
+        width: 15%;
+    }
 }
 
 .footer-nav {
   display: flex;
   justify-content: center;
-
+  align-items: center;
+  
     ul {
         list-style-type: none;
 

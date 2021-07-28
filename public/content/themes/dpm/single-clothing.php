@@ -1,19 +1,31 @@
 <?php get_header();?>
 
-<div class="single-product">
-<?php
- while(have_posts()): the_post(); ?>
-    <?php the_post_thumbnail('post-thumbnail', ['class' => 'main_img', 'alt'=> 'article-product'])?> 
-    <br>
-    <div class="title">
-    <?php the_title(); ?>
-</div>
-<div class="content">
-    <?php the_excerpt('post-excerpt', ['class' => 'main_p']) ?>
-    <br>
-    <?php the_field('prix'); ?>€
-</div>
-<?php endwhile ?>
-</div>
+
+
+    <main class="main">
+        <h1 class="main_h1"><?php the_title(); ?></h1>
+
+        
+            <div class="single_box">
+                <div class="single_box-top">
+                    <div class="single_img-box">
+                        <?php the_post_thumbnail('post-thumbnail', ['class' => 'single_img', 'alt'=> 'article-product'])?> 
+                    </div>
+                    <div class="single_description">
+                        <p class="single_age"><?php the_category() ?>1Mois</p>
+                        <p class="single_category"><?php the_category(); ?>Bébé</p>
+                        <p class="single_price"><?php the_field('prix'); ?> €</p>
+                        <button>Ajouter au panier</button>
+                    </div>
+                </div>
+                <div class="single_description--full">
+                    <h2>Description</h2>
+                    <p class="single_excerpt"><?php the_excerpt('post-excerpt') ?></p>
+                </div>
+                
+            </div>
+       
+    </main>
+
 
 <?php get_footer();?>

@@ -27,8 +27,20 @@ function dpm_load_assets()
         null,   
         true    // true pour dire que le javascript sera chargé à la fin de la balise <body>
     );
+
+    wp_enqueue_script(
+        'menuActive-js',  // "nom du fichier js
+        get_theme_file_uri('assets/js/menu-active.js'),
+        [],
+        null,   
+        true    // true pour dire que le javascript sera chargé à la fin de la balise <body>
+    );
 }
-
-
 add_action('wp_enqueue_scripts', 'dpm_load_assets');
 
+
+
+add_action( 'login_enqueue_scripts', 'dpm_login_stylesheets' );
+function dpm_login_stylesheets() {
+    wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/assets/css/login.css' );
+}

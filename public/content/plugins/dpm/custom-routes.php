@@ -4,6 +4,7 @@
 
 use DPM\Controllers\UserController;
 use DPM\Models\CoreModel;
+use DPM\Models\CartModel;
 
 global $router;
 
@@ -45,6 +46,17 @@ $router->map(
        $controller->delete();
     },
     'user-delete'
+);
+
+
+$router->map(
+    'GET',
+    '/user/panier/',
+    function() {
+       $controller = new UserController();
+       $controller->getCommandByUserId();
+    },
+    'user-panier'
 );
 
 

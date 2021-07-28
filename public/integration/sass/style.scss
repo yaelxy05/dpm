@@ -14,7 +14,13 @@ Documentation: https://developer.wordpress.org/themes/basics/main-stylesheet-sty
 @import 'pages/home';
 @import 'pages/footer';
 @import 'pages/gender';
-@import 'pages/singlePage';
+@import 'pages/cart';
+@import 'pages/login';
+@import 'pages/register';
+@import 'pages/userSpace';
+@import 'pages/command';
+@import 'pages/singleClothing';
+
 
 body {
     //background: rgb(53, 30, 114);
