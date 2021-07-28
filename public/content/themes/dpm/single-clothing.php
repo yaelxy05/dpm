@@ -12,7 +12,15 @@
                         <?php the_post_thumbnail('post-thumbnail', ['class' => 'single_img', 'alt'=> 'article-product'])?> 
                     </div>
                     <div class="single_description">
-                        <p class="single_age"><?php the_category() ?>1Mois</p>
+                        <p class="single_age">
+                        <?php 
+                            $ages = get_the_terms(get_the_id(), 'age');
+                            foreach($ages as $age) {
+                                echo $age->name;
+                            }
+                        
+                        ?>
+                        </p>
                         <p class="single_category"><?php the_category(); ?>Bébé</p>
                         <p class="single_price"><?php the_field('prix'); ?> €</p>
                         <button>Ajouter au panier</button>
