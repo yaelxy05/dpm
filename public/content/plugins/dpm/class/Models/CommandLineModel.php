@@ -3,7 +3,7 @@
 namespace DPM\Models;
 
 
-class CommandModel extends CoreModel
+class CommandLineModel extends CoreModel
 {
 
 
@@ -14,12 +14,13 @@ class CommandModel extends CoreModel
                 `id` bigint(24) unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
                 `price` tinyint(4) unsigned NOT NULL,
                 `name` varchar(64) NOT NULL,
+                `command_id` bigint(24) unsigned NOT NULL, 
                 `created_at` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP,
                 `updated_at` datetime NULL
             );
         ";
 
-        require_once(ABSPATH . 'wp-admin/command_line.php');
+        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql);
     }
 
@@ -30,19 +31,20 @@ class CommandModel extends CoreModel
     }
 
 
-    public function insert($commandId, $nameCommand, $price = 0)
+    public function insert($id, $commandId, $productName, $price = 0)
     {
         // STEP WP CUSTOMTABLE insert
         // le tableau data stocke les données à insérer dans la table
         $data = [
+            'id' => $id,
             'command_id' => $commandId,
-            'name' => $nameCommand,
+            'name' => $productName,
             'price' => $price,
             "created_at" => date('Y-m-d H:i:s')
         ];
 
         $this->database->insert(
-            'command', // table dans laquelle insérer les données
+            'command_line', // table dans laquelle insérer les données
             $data // les données à insérer dans la table
         );
     }
@@ -53,14 +55,15 @@ class CommandModel extends CoreModel
             'id' => $id
         ];
         $this->database->delete(
-            'command',
+            'command_line',
             $where
         );
     }
 
-    public function update($commandId, $nameCommand, $price)
+    public function update($id, $commandId, $nameCommand, $price)
     {
         $data = [
+            'id' => $id,
             'command_id' => $commandId,
             'name' => $nameCommand,
             'price' => $price,
@@ -68,7 +71,7 @@ class CommandModel extends CoreModel
         ];
 
         $where = [
-            'id' => $commandId
+            'id' => $id
         ];
 
         $this->database->update(
@@ -79,7 +82,7 @@ class CommandModel extends CoreModel
     }
 
 
-    public function getCommandById($commandId)
+    public function getAllCommandLineByCommand($commandId)
     {
 
         $sql = "
@@ -96,17 +99,8 @@ class CommandModel extends CoreModel
                 $commandId
             ]
         );
-
-        $results = [];
-        foreach($rows as $values) {
-            $command = get_term($values->command_id, 'name', 'price');
-            $results[] = [
-                'name' => $values->name,
-                'price' => $values->price 
-            ];
-        }
-
-        return $results;
+ 
+        return $rows;
     }
 }
 

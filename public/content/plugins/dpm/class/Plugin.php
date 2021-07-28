@@ -4,6 +4,9 @@
 namespace DPM;
 
 use DPM\Router;
+use DPM\Controllers\CartController;
+use DPM\Models\CartModel;
+use DPM\Models\CommandLineModel;
 
 
 class Plugin
@@ -19,6 +22,8 @@ class Plugin
     {
 
         $registration = new Registration();
+
+        new CartController();
 
         $this->router = new Router();
 
@@ -67,6 +72,11 @@ class Plugin
 
     public function activate()
     {
+        $cartModel = new CartModel();
+        $cartModel->createTable();
+
+        $commandLineModel = new CommandLineModel();
+        $commandLineModel->createTable();
     }
 
     public function deactivate()
