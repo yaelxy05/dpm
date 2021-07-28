@@ -1,0 +1,77 @@
+.main {
+    min-height: 100%;
+    @include flexcenter;
+    flex-direction: column;
+    margin: $gutter +4  0;
+
+    .main_h1 {
+        @include h1Main;
+        margin: $gutter  0;
+    }
+
+    .single_box {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .single_img-box {
+            width: 27rem;
+            .single_img {
+               height: 20rem;
+                width: auto; 
+            }
+            
+        }
+        .single_description {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 0 2rem;
+            p {
+                padding: 1rem 0;
+            }
+    
+            .single_price {
+                font-weight: 900;
+            }
+    
+            .single_age {
+                border: solid 1px $color-button;
+                text-align: center;
+                font-weight: 900;
+                border-radius: 10px;
+            }
+            .single_category {
+                border: solid 1px $color-button;
+                text-align: center;
+                font-weight: 900;
+                border-radius: 10px;
+            }
+            button {
+                @include buttonGreen;
+                height: 3.8rem;
+                width: 8.3rem;
+                margin-top: 0.8rem;
+                border-radius: 5px;
+            }
+        }
+
+        .single_description--full {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h2 {
+                @include h2Main;
+            }
+
+            .single_excerpt {
+                width: 40%;
+                text-align: justify;
+            }
+        }
+    }
+
+
+}

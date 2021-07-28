@@ -14,10 +14,10 @@
                     <p class="single_age"><?php the_category() ?>1Mois</p>
                     <p class="single_category"><?php the_category(); ?>Bébé</p>
                     <p class="single_price"><?php the_field('prix'); ?> €</p>
-                    <button><?php get_submit_button(
-                        $text = 'Ajouter au panier',
-                        $name = 'submit'); ?>Ajouter au panier</button>
-
+                    <form method="post">
+                        <input type="hidden" name="product_id" value="<?php the_id(); ?>">
+                        <button name="dpm_add_to_cart" type="submit">Ajouter au panier</button>
+                    </form>
                 </div>
                 <div class="single_description--full">
                     <h2>Description</h2>

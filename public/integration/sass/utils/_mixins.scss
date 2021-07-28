@@ -31,7 +31,19 @@
   font-size: $gutter;
   margin: 2rem;
 }
-
+@mixin h2Main {
+  color: $color-title;
+  font-size: 1.5rem;
+  margin: 1.5rem;
+}
 @mixin borderBlack {
   border: solid 1px $color-border-bottom;
+}
+
+@mixin buttonGreen {
+  background-color: #A7E0E0;
+  color: $color-button;
+  font-weight: bold;
+  border: none;
+  font-size: 1rem;
 }

@@ -19,9 +19,9 @@
         <div class="header_wrapper">
             <div class="header_login">
                 <ul class="header_login-li">
-                    <li>Se connecter</li>
+                    <li><a href="<?= wp_login_url(); ?>">Se connecter</a></li>
                     <li>/</li>
-                    <li> Créer un compte</li>
+                    <li><a href="<?= wp_registration_url(); ?>"> Créer un compte</a></li>
                 </ul>
             </div>
             <div class="header_nav">

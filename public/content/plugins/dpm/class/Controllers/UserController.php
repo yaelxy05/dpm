@@ -3,6 +3,7 @@
 namespace DPM\Controllers;
 
 use DPM\Models\CommandModel;
+use DPM\Models\CartModel;
 
 use WP_Query;
 
@@ -53,6 +54,10 @@ class UserController extends CoreController
 
         // récupération du profil de l'utilisateur
         $dpm = $this->getProfile($user);
+
+        // récupération du panier de l'utilisateur
+        $model = new CartModel();
+        $cart = $model->getProductByUserId($user->ID)
 
         // récupération des commandes l'utilisateur
         $model = new CommandModel();

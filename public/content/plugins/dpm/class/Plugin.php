@@ -4,6 +4,9 @@
 namespace DPM;
 
 use DPM\Router;
+use DPM\Controllers\CartController;
+use DPM\Models\CartModel;
+use DPM\Models\CommandLineModel;
 
 
 class Plugin
@@ -19,6 +22,8 @@ class Plugin
     {
 
         $registration = new Registration();
+
+        new CartController();
 
         $this->router = new Router();
 
@@ -50,6 +55,11 @@ class Plugin
 
         add_action(
             'init',
+            [$this, 'createCrushCustomTaxonomy']
+        );
+
+        add_action(
+            'init',
             [$this, 'createCommandCustomPostType']
         );
 
@@ -57,10 +67,16 @@ class Plugin
             'init',
             [$this, 'createUserProfileCustomPostType']
         );
+
     }
 
     public function activate()
     {
+        $cartModel = new CartModel();
+        $cartModel->createTable();
+
+        $commandLineModel = new CommandLineModel();
+        $commandLineModel->createTable();
     }
 
     public function deactivate()
@@ -119,6 +135,19 @@ class Plugin
         );
     }
 
+    public function createCrushCustomTaxonomy()
+    {
+        register_taxonomy(
+            'crush',
+            ['clothing'],
+            [
+                'label' => 'Coup de coeur',
+                'hierarchical' => true,
+                'public' => true
+            ]
+        );
+    }
+
     public function createClothingCustomPostType()
     {
         register_post_type(
@@ -127,6 +156,7 @@ class Plugin
                 'label' => 'Vêtements',
                 'public' => true,
                 'hierarchical' => false,
+                'menu_icon' => 'dashicons-universal-access-alt',
                 'supports' => [
                     'title',
                     'thumbnail',
@@ -145,6 +175,7 @@ class Plugin
                 'label' => 'Commande',
                 'public' => true,
                 'hierarchical' => false,
+                'menu_icon' => 'dashicons-cart',
                 'supports' => [
                     'title',
                     'thumbnail',
@@ -163,6 +194,7 @@ class Plugin
                 'label' => 'User Profile',
                 'public' => true,
                 'hierarchical' => false,
+                'menu_icon' => 'dashicons-businesswoman',
                 'supports' => [
                     'title',
                     'thumbnail',
@@ -171,5 +203,5 @@ class Plugin
             ]
         );
 
-    }
+    } 
 }
