@@ -39,6 +39,7 @@ get_header();
                         <h2 class="main_h2"><?php the_title() ?></h2>
                         <!-- diplay of excerpt -->
                         <?php the_excerpt('post-excerpt', ['class' => 'main_p']) ?>
+                        <a href="<?php the_permalink()?>"> </a>
                     </div>
                 <?php endwhile; 
             } else {

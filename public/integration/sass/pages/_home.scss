@@ -47,10 +47,19 @@
                     text-align: center;
                     padding-top: 1rem;
                 }
-        
+                
                 p {
                     text-align: right;
                     padding-right: 1rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $color-menu;
+                    font-weight: 600;
+                }
+                .main_detail-box {
+                    @include flexcenter;
                 }
             }
         }

@@ -71,9 +71,12 @@ get_header();
                     <!-- display of picture -->
                     <?php the_category() ?>
                     <?php the_post_thumbnail('post-thumbnail', ['class' => 'main_img', 'alt' => 'article-product']) ?>
-                    <h2 class="main_h2"><?php the_title() ?></h2>
-                    <!-- diplay of excerpt -->
-                    <p class="prix"><?php the_field('prix') ?></p>
+                    <h2 class="main_h2"><?php the_title() ?> </h2>
+                    <div class="main_detail-box">
+                        <a href="<?php the_permalink()?>"><p class="detail">Afficher les détails</p></a>
+                        <!-- diplay of excerpt -->
+                        <p class="prix"><?php the_field('prix') ?> €</p>
+                    </div>
                 </div>
             <?php endwhile ?>
 
