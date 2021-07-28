@@ -18,9 +18,23 @@ get_header();
                     <button class="dropbtn">Age</button>
                     <div class="dropdown-content">
                         <ul>
-                            <li><input type="checkbox" name="age[]" value="toddler"> Toddler</li>
-                            <li><input type="checkbox" name="age[]" value="kid"> Kid</li>
-                            <li><input type="checkbox" name="age[]" value="old"> Old</li>
+                            <li><input type="checkbox" name="age[]" value="0-mois">0 mois</li>
+                            <li><input type="checkbox" name="age[]" value="1-mois">1 mois</li>
+                            <li><input type="checkbox" name="age[]" value="3-mois">3 mois </li>
+                            <li><input type="checkbox" name="age[]" value="6-mois">6 mois </li>
+                            <li><input type="checkbox" name="age[]" value="9-mois">9 mois </li>
+                            <li><input type="checkbox" name="age[]" value="12-mois">12 mois </li>
+                            <li><input type="checkbox" name="age[]" value="18-mois">18 mois </li>
+                            <li><input type="checkbox" name="age[]" value="24-mois">24 mois </li>
+                            <li><input type="checkbox" name="age[]" value="36-mois">36 mois </li>
+                            <li><input type="checkbox" name="age[]" value="3-ans">3 ans </li>
+                            <li><input type="checkbox" name="age[]" value="4-ans">4 ans </li>
+                            <li><input type="checkbox" name="age[]" value="6-ans">6 ans </li>
+                            <li><input type="checkbox" name="age[]" value="8-ans">8 ans </li>
+                            <li><input type="checkbox" name="age[]" value="10-ans">10 ans </li>
+                            <li><input type="checkbox" name="age[]" value="12-ans">12 ans </li>
+                            <li><input type="checkbox" name="age[]" value="14-ans">14 ans </li>
+                            <li><input type="checkbox" name="age[]" value="16-ans">16 ans </li>
                         </ul>
                     </div>
                 </div>
@@ -29,17 +43,24 @@ get_header();
                     <button class="dropbtn">Type</button>
                     <div class="dropdown-content">
                         <ul>
-                            <li><input type="checkbox" name="type[]" value="short"> Short</li>
-                            <li><input type="checkbox" name="type[]" value="robe"> Robe</li>
-                            <li><input type="checkbox" name="type[]" value="roller"> Roller</li>
-                            <li><input type="checkbox" name="type[]" value="cape"> Cape</li>
+                            <li><input type="checkbox" name="type[]" value="hauts-t-shirt">Hauts – T-shirts</li>
+                            <li><input type="checkbox" name="type[]" value="pulls-gilets-sweats	">Pulls – Gilets – Sweats</li>
+                            <li><input type="checkbox" name="type[]" value="manteaux-vestes	">Manteaux – Vestes</li>
+                            <li><input type="checkbox" name="type[]" value="pantalons-shorts	">Pantalons – Shorts</li>
+                            <li><input type="checkbox" name="type[]" value="robes-jupes	">Robes – Jupes</li>
+                            <li><input type="checkbox" name="type[]" value="salopettes	">Salopettes</li>
+                            <li><input type="checkbox" name="type[]" value="pyjamas">Pyjamas</li>
+                            <li><input type="checkbox" name="type[]" value="sous-vetements	">Sous-vêtements</li>
+                            <li><input type="checkbox" name="type[]" value="puericulture">Puériculture</li>
+                            <li><input type="checkbox" name="type[]" value="accessoires">Accessoires</li>
                         </ul>
                     </div>
                 </div>
 
-                <button>Filtrer</button>
+                <button class="filter-button">Filtrer</button>
             </form>
-        </div>
+        </div> 
+    
 
         <div class="main_post">
 
@@ -64,3 +85,4 @@ get_header();
 
 <?php
 get_footer(); ?>
+

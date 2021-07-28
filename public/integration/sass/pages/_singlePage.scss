@@ -1,0 +1,28 @@
+.single-product {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    padding-bottom: 5em;
+
+        .main_img {
+            width: 50%;
+            height: auto;
+            margin: auto;
+            padding-top: 1em;
+        }
+
+        .title {
+            color:#5784BA;
+            margin: auto;
+            font-size: 2em;
+            padding-bottom: 1em;
+        }
+
+        .content {
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
+
+
+}
