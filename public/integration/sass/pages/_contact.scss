@@ -1,0 +1,15 @@
+.main {
+    min-height: 100%;
+    @include flexcenter;
+    flex-direction: column;
+    margin: $gutter +4  0;
+    @include for-phone-only {
+        margin: $gutter 0;
+    }
+    .main_h1 {
+        @include h1Main;
+        margin: $gutter  0;
+    }
+
+
+}
