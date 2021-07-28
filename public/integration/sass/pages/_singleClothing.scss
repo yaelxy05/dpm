@@ -1,0 +1,43 @@
+.main {
+    min-height: 100%;
+    @include flexcenter;
+    flex-direction: column;
+    margin: $gutter +4  0;
+
+    .main_h1 {
+        @include h1Main;
+        margin: $gutter  0;
+    }
+
+    .single_box {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .single_img-box {
+            width: 27rem;
+            .single_img {
+               height: 20rem;
+                width: auto; 
+            }
+            
+        }
+    }
+
+    .single_description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        p {
+            padding: 1rem 0;
+        }
+
+        button {
+            @include buttonGreen;
+            height: 3.8rem;
+            width: 8.3rem;
+            margin-top: 0.8rem;
+            border-radius: 5px;
+        }
+    }
+}
