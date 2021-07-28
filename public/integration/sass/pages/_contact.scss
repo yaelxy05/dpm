@@ -1,0 +1,41 @@
+.main {
+    min-height: 100%;
+    @include flexcenter;
+    flex-direction: column;
+    margin: $gutter +4  0;
+    @include for-phone-only {
+        margin: $gutter 0;
+    }
+    .main_h1 {
+        @include h1Main;
+        margin: $gutter  0;
+    }
+
+    .contact_box {
+        @include flexcenter;
+
+        .contact_member {
+            @include flexcenter;
+            flex-direction: column;
+
+            img {
+                height: 10rem;
+                width: auto;
+                margin: 1rem;
+                border-radius: 3rem;
+            }
+
+            p {
+                margin: 1rem 0;
+                font-weight: 900;
+            }
+
+            .icon {
+                color: $color-title;
+                font-size: 2rem;
+            }
+        }
+    }
+
+
+}
