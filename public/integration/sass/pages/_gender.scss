@@ -1,30 +1,65 @@
 .sidebar {
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 27em;
-    padding-top: 10px;
-   
 
-
-       h3 {
-        color: #5784BA;
-        padding-bottom: 1em;
-       }
-
-    .filter {
-        padding-bottom: 1em;
-        display: block;
-        padding-top: 0%;
-        margin-top: 0%;
-        padding-left: 2em;
+    h3 {
+     color: #5784BA;
     }
 
-    button {
-        padding-left: 2em;
-       
-    }
+ .filter-age {
+     padding-bottom: 1em;
+ }
 }
 
 
- 
+/* Dropdown Button */
+.dropbtn {
+    
+ background-color: white;
+ color: #4c73a3;
+ padding: 8px;
+ padding-right: 1em;
+ font-size: 16px;
+ border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    
+ position: relative;
+ display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color: #f8ecf1;
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+ border-radius: 8%;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #F4CFDF;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #F4CFDF;}
+
+.filter-button {
+    text-decoration: none;
+    color: pink;
+    background-color: white;
+    border-color: pink;
+    border-radius: 15%;
+}
