@@ -19,7 +19,7 @@ class CartModel extends CoreModel
                 `updated_at` datetime NULL
             );
         ";
-        require_once(ABSPATH . 'wp-admin/panier.php');
+        require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql);
     }
 
@@ -39,7 +39,7 @@ class CartModel extends CoreModel
         ];
 
         $this->database->insert(
-            'user_product',
+            'cart_products',
             $data
         );
     }
@@ -50,11 +50,12 @@ class CartModel extends CoreModel
             'id' => $id
         ];
         $this->database->delete(
-            'user_product',
+            'cart_products',
             $where
         );
     }
 
+    // TODO: verify that it's ok
     public function update($id, $productId)
     {
         $data = [
@@ -67,7 +68,7 @@ class CartModel extends CoreModel
         ];
 
         $this->database->update(
-            'user_product',
+            'cart_products',
             $data,
             $where
         );
@@ -79,7 +80,7 @@ class CartModel extends CoreModel
         $sql = "
             SELECT
                 *
-            FROM `user_product`
+            FROM `cart_products`
             WHERE
                 user_id = %d
         ";
@@ -91,14 +92,14 @@ class CartModel extends CoreModel
             ]
         );
 
-        $products = [];
+        $clothings = [];
         foreach($rows as $values) {
             // Récupération du post
-            $product = get_post($values->product_id, 'product');
-            $products[] =  $product;
+            $clothing = get_post($values->product_id, 'clothing');
+            $clothings[] =  $clothing;
         }
 
-        return $products;
+        return $clothings;
     }
 }
 
