@@ -146,6 +146,7 @@ class Plugin
                 'label' => 'Vêtements',
                 'public' => true,
                 'hierarchical' => false,
+                'menu_icon' => 'dashicons-universal-access-alt',
                 'supports' => [
                     'title',
                     'thumbnail',
@@ -164,6 +165,7 @@ class Plugin
                 'label' => 'Commande',
                 'public' => true,
                 'hierarchical' => false,
+                'menu_icon' => 'dashicons-cart',
                 'supports' => [
                     'title',
                     'thumbnail',
@@ -182,6 +184,7 @@ class Plugin
                 'label' => 'User Profile',
                 'public' => true,
                 'hierarchical' => false,
+                'menu_icon' => 'dashicons-businesswoman',
                 'supports' => [
                     'title',
                     'thumbnail',
