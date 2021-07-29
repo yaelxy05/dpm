@@ -60,7 +60,7 @@ class UserController extends CoreController
         $cart = $model->getProductByUserId($user->ID)
 
         // récupération des commandes l'utilisateur
-        $model = new CommandModel();
+        $model = new CommandLineModel();
         $command = $model->getCommandByUserId($user->ID);
 
 
