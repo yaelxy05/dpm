@@ -17,7 +17,7 @@ get_header();
 
         <?php 
             $args = [
-                'posts_per_page' => 3,
+                'posts_per_page' => 4,
                 'post_type' => 'clothing',
                 'tax_query' => [
                     [
@@ -35,10 +35,9 @@ get_header();
                 while ( $crushClothingQuery->have_posts() ) : $crushClothingQuery->the_post(); ?>
                     <div class="main_wrapper">
                         <!-- display of picture -->
-                        <?php the_post_thumbnail('post-thumbnail', ['class' => 'main_img', 'alt'=> 'article-product'])?> 
+                        <a href="<?php the_permalink()?>"><?php the_post_thumbnail('post-thumbnail', ['class' => 'main_img', 'alt'=> 'article-product'])?> 
                         <h2 class="main_h2"><?php the_title() ?></h2>
-                        <!-- diplay of excerpt -->
-                        <?php the_excerpt('post-excerpt', ['class' => 'main_p']) ?>
+                        <a href="<?php the_permalink()?>"> </a>
                     </div>
                 <?php endwhile; 
             } else {
@@ -70,6 +69,40 @@ get_header();
                 </div>
             </div>
         </div>
+
+        <h1 class="main_h1">Nouveautés</h1>
+
+<div class="main_post">
+
+<?php 
+    $args = [
+        'posts_per_page' => 4,
+        'post_type' => 'clothing',
+        
+    ];
+
+    $newClothingQuery = new WP_Query($args); 
+    // The Loop
+    if ( $newClothingQuery->have_posts() ) {
+        
+        while ( $newClothingQuery->have_posts() ) : $newClothingQuery->the_post(); ?>
+            <div class="main_wrapper">
+                <!-- display of picture -->
+                <a href="<?php the_permalink()?>"><?php the_post_thumbnail('post-thumbnail', ['class' => 'main_img', 'alt'=> 'article-product'])?> 
+                <h2 class="main_h2"><?php the_title() ?></h2>
+                <!-- diplay of excerpt -->
+                <a href="<?php the_permalink()?>"> </a>
+            </div>
+        <?php endwhile; 
+    } else {
+        // no posts found
+    }
+    /* Restore original Post Data */
+    wp_reset_postdata();
+?>
+
+</div>
+
     </div>
 </main>
 

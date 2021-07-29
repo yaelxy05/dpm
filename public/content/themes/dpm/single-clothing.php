@@ -22,7 +22,13 @@
                         
                         ?>
                         </p>
-                        <p class="single_category"><?php the_category(); ?>Bébé</p>
+                        <p class="single_category"><?php 
+                            $genders = get_the_terms(get_the_id(), 'gender');
+                            foreach($genders as $gender) {
+                                echo $gender->name;
+                            }
+                        
+                        ?></p>
                         <p class="single_price"><?php the_field('prix'); ?> €</p>
                          <form method="post">
                         <input type="hidden" name="product_id" value="<?php the_id(); ?>">

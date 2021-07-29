@@ -7,23 +7,42 @@ class CartController {
 
     public function __construct()
     {
-        add_action('init', [$this, 'handle_add_to_cart']);
-        
+        // Handle add to cart
+        add_action('template_redirect', [$this, 'handle_add_to_cart']);
+
+        add_action('template_redirect', [$this, 'handle_previous_archive_page']);
     }
 
-    public function handle_add_to_cart() {
+    // Allow us to set the url of one of those pages : filles/garcon/bebe, to redirect after an add to cart
+    public function handle_previous_archive_page() {
+        if(is_tax('gender')) {
+            $_SESSION['previous_shop_page'] = get_term_link(get_queried_object()->term_id);
+        }
+    }
+
+    public function handle_add_to_cart($product) {
+        
         if(isset($_POST['dpm_add_to_cart'])) {
             // on récupère l'id du produit
-            wp_set_post_terms($post_id = 0);
+            $productId = $_POST['product_id'];
+          
             // on récupère l'id de l'utilisateur
-            $user = wp_get_current_user();
+            $user_id = get_current_user_id();
             // on utilise le CartModel (avec la bonne méthode) pour insérer ces infos dans la table cart_product
             $model = new CartModel();
-            $model->insert($user->ID, $post_id);
 
-            var_dump($post_id);
+            // si le produit est déjà dans le panier de l'utilisateur, on arrète tout, on met une erreur etc ..
+            if($model->getProductByUserId($user_id, $productId)) {
+                return;
+            }
 
-           // wp_redirect($this->router->generate('user-panier'));
+            $model->insert($user_id, $productId);
+
+            // If the user went trough fille/garcon or bebe we redirect him to this page
+            if(isset($_SESSION['previous_shop_page'])) {
+                wp_redirect($_SESSION['previous_shop_page']);
+                exit;
+            }
         }
         
     }

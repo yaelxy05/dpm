@@ -75,8 +75,37 @@ class CartModel extends CoreModel
     }
 
 
-    public function getProductByUserId($userId)
+    public function getProductByUserId($userId, $productId)
     {
+        $sql = "
+            SELECT
+                *
+            FROM `cart_products`
+            WHERE
+                user_id = %d
+            AND 
+                product_id = %d
+        ";
+
+        $rows = $this->executePreparedStatement(
+            $sql,
+            [
+                $userId,
+                $productId
+            ]
+        );
+
+        $clothings = [];
+        foreach($rows as $values) {
+            // Récupération du post
+            $clothing = get_post($values->product_id, 'clothing');
+            $clothings[] =  $clothing;
+        }
+
+        return $clothings;
+    }
+
+    public function getUserCart($userId) {
         $sql = "
             SELECT
                 *
@@ -88,7 +117,7 @@ class CartModel extends CoreModel
         $rows = $this->executePreparedStatement(
             $sql,
             [
-                $userId
+                $userId,
             ]
         );
 
