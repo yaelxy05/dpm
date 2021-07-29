@@ -14,7 +14,7 @@ class CartController {
     public function handle_add_to_cart($product) {
         if(isset($_POST['dpm_add_to_cart'])) {
             // on récupère l'id du produit
-            global $product;
+            // global $product;
             $product->get_id();
 
             // on récupère l'id de l'utilisateur
