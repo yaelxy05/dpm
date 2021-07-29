@@ -4,7 +4,7 @@
 
     <nav class="footer-nav">
         <ul>
-            <li><a href="#">Mentions légales</a></li>
+            <li><a href="http://localhost/apo/il-etait-plusieurs-doigts/public/mentions-legales/">Mentions légales</a></li>
             <li><a href="#">A propos</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
