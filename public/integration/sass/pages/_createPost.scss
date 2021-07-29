@@ -10,7 +10,7 @@
     .main_h1 {
         @include h1Main;
         margin: $gutter  0;
-    }
+    }  
 
     .main_create--input-box {
         background-color: $background-input;
@@ -25,7 +25,7 @@
         @include for-phone-only {
             width: 13rem;
         }
-        .main_input-upload {
+       
             width: 20rem;
             border: none;
             margin: 1rem 0;
@@ -57,6 +57,7 @@
                 
                 @include for-phone-only {
                     width: 10rem;
+                
                 }
 
                 &::placeholder {
@@ -79,6 +80,7 @@
             label {
                 padding: 1rem 0;
             }
+
 
             textarea {
                 border: none;
@@ -132,4 +134,3 @@
             }
         }
     }
-}
