@@ -8,7 +8,9 @@
 <?php
 get_header();
 ?>
-	<?php acf_form_head();
+	<?php acf_form_head(); ?>
+
+
 
 // ...
 
@@ -27,9 +29,12 @@ acf_form( $args ); // Afficher le formulaire
 <main class="main">
     <h1 class="main_h1">Mise à la vente</h1>
     <div class="main_create--input-box">
-        <?php while ( have_posts() ) : the_post(); ?>
-            
-        <?php endwhile; ?>
+    <?php acf_form(array(
+        'post_id'       => 'new_post',
+        'post_title'    => true,
+        'post_content'  => true,
+        'submit_value'  => __('Update meta')
+    )); ?>
         
 
         
