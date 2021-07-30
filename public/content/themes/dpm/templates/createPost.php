@@ -4,32 +4,35 @@
  * Template Name: Create-post
  */
 ?>
+
 <?php
 get_header();
 ?>
+	<?php acf_form_head();
 
+// ...
+
+$args = array(
+    'post_id' => 'new_post', // On va créer une nouvelle publication
+    'new_post' => array(
+        'post_type' => 'annuaire', // Enregistrer dans l'annuaire
+    ),
+    'field_groups' => array( 329 ), // L'ID du post du groupe de champs
+    'submit_value' => 'Valider mon inscription', // Intitulé du bouton
+    'updated_message' => "Votre demande a bien été prise en compte.",
+);
+
+acf_form( $args ); // Afficher le formulaire
+?>
 <main class="main">
     <h1 class="main_h1">Mise à la vente</h1>
     <div class="main_create--input-box">
-        <form action="" method="post">
-            <div class="main_input-upload picture_upload">
-                <label for="description">Ajoutez une image</label>
-                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" required>
-            </div>
-            <div class="main_textarea description">
-                <label for="description">description</label>
-                <textarea id="description" name="description"
-                rows="5" cols="33" required>
-                </textarea>
-            </div>
-            <div class="main_input-create price">
-                <label for="price">prix</label>
-                <input type="text" id="price" name="price" placeholder="prix" required>
-            </div>
-            <div class="main_loginBottom-box">
-                <button id="button_connexion" type="submit" value="Envoyer">Ajoutez l'article'</button>
-            </div>
-        </form>
+        <?php while ( have_posts() ) : the_post(); ?>
+            
+        <?php endwhile; ?>
+        
+
+        
     </div>
 </main>
 
