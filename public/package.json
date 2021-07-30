@@ -18,5 +18,9 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^5.15.3"
-    }
+    },
+    "scripts": {
+        "gulp": "gulp"
+      }
+
 }

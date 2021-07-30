@@ -65,15 +65,25 @@
 }
 
 .main_post {
-
-    .detail{
-        color: #5784BA;
-        font-weight:normal;
-        
+    .main_wrapper {
+        padding-top: 1rem;
+        .main_detail-box {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            
+            
+            .detail{
+                color: #2b2e33;
+                font-weight:normal;
+            }
+            .prix {
+                font-weight: bold;
+                font-size: 1.5rem;
+                margin: 1rem 0;
+            }
+        }
     }
-
-    .prix {
-        font-weight: bold;
-        
-    }
+    
+    
 }
