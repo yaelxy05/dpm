@@ -1,10 +1,11 @@
 <?php
 get_header();
 ?>
+<main class="main_404-box">
 <h1>Oups, vous êtes à la laverie !</h1>
 
 
-<div class="main">
+<div class="main_404">
     <div class="l">
       <div class="l__face l__face--front">
         <div class="l__control"></div>
@@ -34,10 +35,10 @@ get_header();
     </div>
   </div>
 
-  <p><h2>Ici, on prépare vos vêtements :D </p>
-    <p>Pour retourner à la boutique, c'est par ici </h2></p>
+  <p>Ici, on prépare vos vêtements :D </p>
+  <p>Pour retourner à la boutique, c'est par ici</p>
     
-
+</main>
 <?php
 get_footer();
 ?>
