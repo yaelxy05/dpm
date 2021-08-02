@@ -53,19 +53,19 @@ get_header();
             <div class="main_select girl">
                 <div class="main_img main_img--girl"></div>
                 <div class="main_select--textbox girl--text">
-                    <a href="http://localhost/apo/il-etait-plusieurs-doigts/public/gender/fille/"><p class="main_select--text">fille</p></a>
+                    <a href="<?php echo get_term_link('fille', 'gender') ?>"><p class="main_select--text">fille</p></a>
                 </div>
             </div>
             <div class="main_select boy">
                 <div class="main_img main_img--boy"></div>
                 <div class="main_select--textbox boy--text">
-                    <a href="http://localhost/apo/il-etait-plusieurs-doigts/public/gender/fille/"><p class="main_select--text">garçon</p></a>
+                    <a href="<?php echo get_term_link('garcon', 'gender') ?>"><p class="main_select--text">garçon</p></a>
                 </div>
             </div>
             <div class="main_select baby">
             <div class="main_img main_img--baby"></div>
                 <div class="main_select--textbox baby--text">
-                    <a href="http://localhost/apo/il-etait-plusieurs-doigts/public/gender/fille/"><p class="main_select--text">bébé</p></a>
+                    <a href="<?php echo get_term_link('bebe', 'gender') ?>"><p class="main_select--text">bébé</p></a>
                 </div>
             </div>
         </div>
