@@ -46,5 +46,18 @@ class CartController {
         }
         
     }
+
+    public function handle_delete_to_cart($product) {
+
+        if(isset($_POST['dpm_delete_to_cart'])) {
+
+            $productId = $_POST['product_id'];
+
+            $user_id = get_current_user_id();
+
+            
+
+        }
+    }
 }
 
