@@ -20,8 +20,8 @@ $cartProducts = $cartModel->getUserCart(get_current_user_id());
                 <p class="cart_description"><?php the_title(); ?></p>
                 <p class="cart_price"><?php the_field('prix'); ?> €</p>
                 <form method="post">
-                    <input type="hidden" name="product_id" value="<?php the_id(); ?>">
-                    <i class="fas fa-trash-alt"></i>
+                    <input type="hidden" name="id" value="<?php the_id(); ?>">
+                    <button type="submit" name="dpm_delete_to_cart"><i  class="fas fa-trash-alt"></i></button>
                 </form>
             </div>
         <?php endforeach; wp_reset_postdata(); ?>

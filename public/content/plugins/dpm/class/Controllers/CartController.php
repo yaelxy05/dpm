@@ -53,11 +53,15 @@ class CartController {
 
         if(isset($_POST['dpm_delete_to_cart'])) {
 
-            $productId = $_POST['product_id'];
+            $id = $_POST['id'];
 
             $user_id = get_current_user_id();
 
+            $model = new CartModel();
+
             
+
+            $model->delete($user_id, $id);
 
         }
     }
