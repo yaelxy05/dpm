@@ -13,22 +13,36 @@
                         <?php the_post_thumbnail('post-thumbnail', ['class' => 'single_img', 'alt'=> 'article-product'])?> 
                     </div>
                     <div class="single_description">
-                        <p class="single_age">
                         <?php 
-                            $ages = get_the_terms(get_the_id(), 'age');
-                            foreach($ages as $age) {
-                                echo $age->name;
-                            }
-                        
+                            $ages = get_the_terms(get_the_id(), 'age');  
+                            if($ages) :
                         ?>
+                            <p class="single_age">
+                            <?php 
+                            
+                                foreach($ages as $age) {
+                                    echo $age->name;
+                                }
+                            
+                            ?>
                         </p>
-                        <p class="single_category"><?php 
+                        <?php endif; ?>
+                            
+                        <?php 
                             $genders = get_the_terms(get_the_id(), 'gender');
-                            foreach($genders as $gender) {
-                                echo $gender->name;
-                            }
-                        
-                        ?></p>
+                            if($genders) :
+                        ?>
+                            <p class="single_category">
+                                <?php 
+                                
+                                    foreach($genders as $gender) {
+                                        echo $gender->name;
+                                    }
+                                
+                                ?>
+                            </p>
+                        <?php endif; ?>
+
                         <p class="single_price"><?php the_field('prix'); ?> €</p>
                          <form method="post">
                         <input type="hidden" name="product_id" value="<?php the_id(); ?>">
