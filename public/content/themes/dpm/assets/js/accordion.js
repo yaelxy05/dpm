@@ -1,19 +1,56 @@
-console.log("heloo")
+console.log('%c' + "Fichier accordion.js chargé", 'color: #0bf; font-size: 1rem; background-color:#fff');
 
-let accordions = document.getElementsByClassName("accordion");
- 
-for (let i = 0; i < accordions.length; i++) {
-  accordions[i].onclick = function() {
-    this.classList.toggle('is-open');
- 
+
+/*const accordions = {
+  accordion:null,
+  init: function() {
+    accordions.accordion = document.querySelectorAll('.accordion');
+    
+    for(let accord of accordions.accordion) {
+      accord.addEventListener('click', accordions.handleClick);
+    }
+    
+  },
+  handleClick:function(event) {
+    event.preventDefault();
+    
+    const accordionsBox = document.querySelector('.accordion_box');
+    console.log(accordionsBox);
+    accordionsBox.classList.toggle('is-open');
+
+  },
+
+}
+// Loading of dom
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Dom loaded');
+  // once the loading dom, we launch the app
+  accordions.init();
+});
+*/
+
+
+
+let acc = document.querySelectorAll('.accordion');
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function(event) {
+    event.preventDefault();
+    
+    
+    this.classList.toggle("is-open");
+
+    
     let content = this.nextElementSibling;
     if (content.style.maxHeight) {
-      // accordion is currently open, so close it
+      
+      
       content.style.maxHeight = null;
     } else {
-      // accordion is currently closed, so open it
+      
       content.style.maxHeight = content.scrollHeight + "px";
     }
-  }
+     
+  });
 }
-
