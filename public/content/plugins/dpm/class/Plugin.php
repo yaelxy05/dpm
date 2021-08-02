@@ -20,7 +20,10 @@ class Plugin
 
     public function __construct()
     {
-
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        
         $registration = new Registration();
 
         new CartController();
