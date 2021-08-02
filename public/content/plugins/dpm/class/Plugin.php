@@ -117,7 +117,10 @@ class Plugin
             [
                 'label' => 'Genre',
                 'hierarchical' => true,
-                'public' => true
+                'public' => true,
+                'show_ui' => true,
+                'show_in_quick_edit' => false,
+                'meta_box_cb' => false,
             ]
         );
     }
