@@ -11,6 +11,7 @@
     <?php
     wp_head();
     ?>
+    <?php acf_form_head(); ?>
 </head>
 
 <body>
