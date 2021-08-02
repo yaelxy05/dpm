@@ -37,8 +37,10 @@
             
             .acf-field {
                 .acf-input-wrap {
+                    border: none;
                     .acf-is-appended {
                         border: none;
+                        
                         &:focus {
                             outline: none;
                             border-bottom: solid 3px $color-girl;
@@ -55,33 +57,7 @@
                 }
                 
             }
-            // box input title
-            .acf-field--post-title {
 
-            }
-            // box text area
-            .acf-field--post-content {
-                textarea {
-                    border: none;
-                    border-bottom: solid 3px rgb(192, 192, 192);
-                    padding-left: 0.5rem;
-                    height: 10rem;
-    
-                    @include for-phone-only {
-                        width: 10rem;
-                    }
-    
-                    &::placeholder {
-                        font-weight: bold;
-                        color: $color-placeholder;
-                    }
-    
-                    &:focus {
-                        outline: none;
-                        border-bottom: solid 3px $color-girl;
-                    }
-                }
-            }
             .acf-fields {
                 
                 .acf-label {
@@ -92,26 +68,33 @@
                     width: 20rem;
                     border: none;
                     color: $color-button;
-
-                    .acf-bl {
-                        color: $color-button;
-                    }
-
-
-                    .acf-taxonomy-field {
-                        .acf-checkbox-list {
-                        label {
-                            color: $color-button;
-                        }
-                    }
-                    
-                    }
-
-                    
+                    border-radius: 10px;
                 }
+
+
+                    
             }
         }
+        }
+        span {
+            color: $color-button;
+            font-weight: bold;
+        }
 
+        .acf-required {
+            color: red;
+        }
+        .acf-input-append {
+            border: none;
+            background: none;
+            font-weight: 900;
+        }
+
+        .acf-button {
+            text-decoration: none;
+            color: $color-button;
+            font-weight: 900;
+        }
         .acf-form-submit {
             @include flexcenter;
 
@@ -124,7 +107,7 @@
                 border-radius: 5px;
             }
         }
-        }
+    }
 
 
   
