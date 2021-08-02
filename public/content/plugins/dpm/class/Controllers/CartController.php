@@ -11,6 +11,8 @@ class CartController {
         add_action('template_redirect', [$this, 'handle_add_to_cart']);
 
         add_action('template_redirect', [$this, 'handle_previous_archive_page']);
+
+        add_action('template_redirect', [$this, 'handle_delete_to_cart']);
     }
 
     // Allow us to set the url of one of those pages : filles/garcon/bebe, to redirect after an add to cart
