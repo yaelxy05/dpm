@@ -44,13 +44,13 @@ get_header();
                     <div class="dropdown-content">
                         <ul>
                             <li><input type="checkbox" name="type[]" value="hauts-t-shirt">Hauts – T-shirts</li>
-                            <li><input type="checkbox" name="type[]" value="pulls-gilets-sweats	">Pulls – Gilets – Sweats</li>
+                            <li><input type="checkbox" name="type[]" value="pulls-gilets-sweats">Pulls – Gilets – Sweats</li>
                             <li><input type="checkbox" name="type[]" value="manteaux-vestes	">Manteaux – Vestes</li>
-                            <li><input type="checkbox" name="type[]" value="pantalons-shorts	">Pantalons – Shorts</li>
-                            <li><input type="checkbox" name="type[]" value="robes-jupes	">Robes – Jupes</li>
-                            <li><input type="checkbox" name="type[]" value="salopettes	">Salopettes</li>
+                            <li><input type="checkbox" name="type[]" value="pantalons-shorts ">Pantalons – Shorts</li>
+                            <li><input type="checkbox" name="type[]" value="robes-jupes">Robes – Jupes</li>
+                            <li><input type="checkbox" name="type[]" value="salopettes">Salopettes</li>
                             <li><input type="checkbox" name="type[]" value="pyjamas">Pyjamas</li>
-                            <li><input type="checkbox" name="type[]" value="sous-vetements	">Sous-vêtements</li>
+                            <li><input type="checkbox" name="type[]" value="sous-vetements">Sous-vêtements</li>
                             <li><input type="checkbox" name="type[]" value="puericulture">Puériculture</li>
                             <li><input type="checkbox" name="type[]" value="accessoires">Accessoires</li>
                         </ul>
