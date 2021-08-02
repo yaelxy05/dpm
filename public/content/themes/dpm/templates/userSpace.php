@@ -16,7 +16,7 @@ get_header();
                 <img src="<?= get_theme_file_uri('assets/images/accessoires/208759369_2806360789676012_1529577717722661111_n.jpg') ?>" alt="picture in sale">
                 <p>prix</p>
             </div>
-            <button>+ Ajoutez un produit</button>
+            <a href=" http://localhost/apo/il-etait-plusieurs-doigts/public/create-post/"><button>+ Ajoutez un produit</button></a>
             <div class="main_dataUser">
                 <h2 class="main_info">Informations du compte</h2>
                 <div class="main_boxP">

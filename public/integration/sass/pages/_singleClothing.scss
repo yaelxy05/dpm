@@ -64,9 +64,7 @@
         
                 .single_price {
                     font-weight: 900;
-                    @include for-tablet-portrait-up {
-                        text-align: center;
-                    }
+                    text-align: center;
                 }
         
                 .single_age {
@@ -87,6 +85,7 @@
                     width: 8.3rem;
                     margin-top: 0.8rem;
                     border-radius: 5px;
+                    cursor: pointer;
                 }
             }
         }

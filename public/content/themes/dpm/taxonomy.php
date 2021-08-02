@@ -75,6 +75,7 @@ get_header();
                     <div class="main_detail-box">
                         <a href="<?php the_permalink()?>"><p class="detail">Afficher les détails</p></a>
                         <!-- diplay of excerpt -->
+                        
                         <p class="prix"><?php the_field('prix') ?> €</p>
                     </div>
                 </div>
