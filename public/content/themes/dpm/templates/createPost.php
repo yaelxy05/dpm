@@ -6,6 +6,7 @@
 ?>
 
 <?php
+// WARNING display always acf_form_head(); in top and get_header(); in bottom
 acf_form_head();
 get_header();
 ?>
