@@ -19,7 +19,10 @@ $cartProducts = $cartModel->getUserCart(get_current_user_id());
                 <img class="cart_picture" src="<?php the_post_thumbnail('post-thumbnail', ['class' => 'single_img', 'alt'=> 'article-product']);?>
                 <p class="cart_description"><?php the_title(); ?></p>
                 <p class="cart_price"><?php the_field('prix'); ?> €</p>
-                <i class="fas fa-trash-alt"></i>
+                <form method="post">
+                    <input type="hidden" name="product_id" value="<?php the_id(); ?>">
+                    <i class="fas fa-trash-alt"></i>
+                </form>
             </div>
         <?php endforeach; wp_reset_postdata(); ?>
     </div>
