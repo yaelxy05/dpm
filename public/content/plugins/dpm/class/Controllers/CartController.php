@@ -53,7 +53,7 @@ class CartController {
 
         if(isset($_POST['dpm_delete_to_cart'])) {
 
-            $id = $_POST['id'];
+            $id = $_POST['product_id'];
 
             $user_id = get_current_user_id();
 
