@@ -6,6 +6,12 @@
 ?>
 <?php
 get_header();
+
+use DPM\Models\CommandLineModel;
+
+$commandLineModel = new CommandLineModel();
+$commandId = $commandLineModel->getAllCommandLineByCommand(get_current_user_id());
+
 ?>
 
 <main class="main">
