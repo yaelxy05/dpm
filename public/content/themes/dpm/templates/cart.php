@@ -38,7 +38,7 @@ $cartProducts = $cartModel->getUserCart(get_current_user_id());
             <p><?= $total_price + 3.90; ?>€</p>
         </div>
         <div class="cart_total-button">
-            <button>Valider ma commande</button>
+            <a href="<?php echo get_home_url() . '/commande' ?>">Valider ma commande</a>
         </div>
     </div>
 </main>

@@ -1,56 +1,50 @@
 <?php
-
-/**
- * Template Name: Commande
- */
-?>
-<?php
 get_header();
 
-use DPM\Models\CommandLineModel;
+use DPM\Models\CartModel;
 
-$commandLineModel = new CommandLineModel();
-$commandId = $commandLineModel->getAllCommandLineByCommand(get_current_user_id());
+$cartModel = new CartModel();
+$cartProducts = $cartModel->getUserCart(get_current_user_id());
 
 ?>
 
 <main class="main">
-    <div class="main_box">
-        <h1 class="main_h1">Mes commandes</h1>
+    <h1 class="main_h1">Panier</h1>
+    <div class="cart_wrapper">
 
-        <div class="main_wrapper">
-            <div class="command_product">
-                <img class="command_picture" src="<?= get_theme_file_uri('assets/images/accessoires/206094083_343378580660736_3262409337469414675_n.jpg') ?>" alt="cart product">
-                <p class="command_description">description</p>
-                <p class="command_quantity">Quantité:1</p>
-                <p class="command_price">9.99€</p>
-                <p class="command_date">Date de la commande : Le 12 juillet 2021</p>
+        <?php $total_price = 0; ?>
+        <?php foreach($cartProducts as $post) : setup_postdata($post); 
+        $total_price += get_field('prix'); ?>
+            <div class="cart_product">
+                <img class="cart_picture" src="<?php the_post_thumbnail('post-thumbnail', ['class' => 'single_img', 'alt'=> 'article-product']);?>
+                <p class="cart_description"><?php the_title(); ?></p>
+                <p class="cart_price"><?php the_field('prix'); ?> €</p>
+                <i class="fas fa-trash-alt"></i>
             </div>
-            <div class="command_product">
-                <img class="command_picture" src="<?= get_theme_file_uri('assets/images/accessoires/206094083_343378580660736_3262409337469414675_n.jpg') ?>" alt="cart product">
-                <p class="command_description">description</p>
-                <p class="command_quantity">Quantité:1</p>
-                <p class="command_price">9.99€</p>
-                <p class="command_date">Date de la commande : Le 12 juillet 2021</p>
-            </div>
-            <div class="command_product">
-                <img class="command_picture" src="<?= get_theme_file_uri('assets/images/accessoires/206094083_343378580660736_3262409337469414675_n.jpg') ?>" alt="cart product">
-                <p class="command_description">description</p>
-                <p class="command_quantity">Quantité:1</p>
-                <p class="command_price">9.99€</p>
-                <p class="command_date">Date de la commande : Le 12 juillet 2021</p>
-            </div>
-            <div class="command_product">
-                <img class="command_picture" src="<?= get_theme_file_uri('assets/images/accessoires/206094083_343378580660736_3262409337469414675_n.jpg') ?>" alt="cart product">
-                <p class="command_description">description</p>
-                <p class="command_quantity">Quantité:1</p>
-                <p class="command_price">9.99€</p>
-                <p class="command_date">Date de la commande : Le 12 juillet 2021</p>
-            </div>
+        <?php endforeach; wp_reset_postdata(); ?>
+    </div>
+
+    <div class="cart_total">
+        <div class="cart_total-product">
+            <p>Produits</p>
+            <p><?= $total_price; ?>€</p>
+        </div>
+        <div class="cart_total-product">
+            <p>Livraison</p>
+            <p>3.90€</p>
+        </div>
+        <div class="cart_total-product">
+            <p>Total</p>
+            <p><?= $total_price + 3.90; ?>€</p>
+        </div>
+        <div class="cart_total-button">
+            <button>Commande</button>
         </div>
     </div>
 </main>
+ 
 
-<?php
+
+ <?php
 get_footer();
 ?>
