@@ -68,6 +68,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_6107b67bf2f6c",
+            "label": "Statut",
+            "name": "statut",
+            "type": "true_false",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Actif",
+            "ui_off_text": "Inactif"
         }
     ],
     "location": [
@@ -87,5 +106,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1627890406
+    "modified": 1627997162
 }

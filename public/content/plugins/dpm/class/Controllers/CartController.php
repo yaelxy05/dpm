@@ -27,6 +27,8 @@ class CartController {
         if(isset($_POST['dpm_add_to_cart'])) {
             // on récupère l'id du produit
             $productId = $_POST['product_id'];
+
+            wp_update_post(['ID' => $productId, 'post_status' => 'draft']);
           
             // on récupère l'id de l'utilisateur
             $user_id = get_current_user_id();
@@ -54,6 +56,8 @@ class CartController {
         if(isset($_POST['dpm_delete_to_cart'])) {
 
             $id = $_POST['product_id'];
+
+            wp_update_post(['ID' => $id, 'post_status' => 'publish']);
 
             $user_id = get_current_user_id();
 
