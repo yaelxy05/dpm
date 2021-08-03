@@ -59,9 +59,7 @@ class CartController {
 
             $model = new CartModel();
 
-            
-
-            $model->delete($user_id, $id);
+            $model->deleteProductForUser($user_id, $id);
 
         }
     }
