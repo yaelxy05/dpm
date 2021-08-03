@@ -21,7 +21,7 @@ function acf_set_clothing_featured_image( $value, $post_id, $field  ){
 }
 
 // Vu qu'on a ajouté l'image via ACF, on supprime la metabox par défaut pour l'image mise en avant
-add_action('do_meta_boxes', 'remove_thumbnail_box');
-function remove_thumbnail_box($post_type) {
-    remove_meta_box( 'postimagediv','clothing','side' );
-}
+// add_action('do_meta_boxes', 'remove_thumbnail_box');
+// function remove_thumbnail_box($post_type) {
+//     remove_meta_box( 'postimagediv','clothing','side' );
+// }
