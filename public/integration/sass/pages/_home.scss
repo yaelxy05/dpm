@@ -67,6 +67,12 @@
             width: 80%;
             min-height: 90vh;
             margin: 2rem 0;
+
+            a {
+                text-decoration: none;
+                color: $color-border-bottom;
+            }
+
             @include for-tablet-portrait-up {
                 min-height: 80vh;
             }
@@ -119,6 +125,11 @@
                     font-size: 2rem;
                     font-weight: bold;
                     text-transform: uppercase;
+
+                    .main_select--text {
+                        text-decoration: none;
+                    }
+                    
                     @include flexcenter;
                     @include for-phone-only {
                         height: 10rem;

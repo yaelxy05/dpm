@@ -9,7 +9,7 @@ $cartProducts = $cartModel->getUserCart(get_current_user_id());
 ?>
 
 <main class="main">
-    <h1 class="main_h1">Panier</h1>
+    <h1 class="main_h1">Commande</h1>
     <div class="cart_wrapper">
 
         <?php $total_price = 0; ?>
@@ -19,7 +19,6 @@ $cartProducts = $cartModel->getUserCart(get_current_user_id());
                 <img class="cart_picture" src="<?php the_post_thumbnail('post-thumbnail', ['class' => 'single_img', 'alt'=> 'article-product']);?>
                 <p class="cart_description"><?php the_title(); ?></p>
                 <p class="cart_price"><?php the_field('prix'); ?> €</p>
-                <i class="fas fa-trash-alt"></i>
             </div>
         <?php endforeach; wp_reset_postdata(); ?>
     </div>
@@ -38,7 +37,9 @@ $cartProducts = $cartModel->getUserCart(get_current_user_id());
             <p><?= $total_price + 3.90; ?>€</p>
         </div>
         <div class="cart_total-button">
-            <button>Commande</button>
+            <form method="post">
+                <button name="process_command">Commande</button>
+            </form>
         </div>
     </div>
 </main>
