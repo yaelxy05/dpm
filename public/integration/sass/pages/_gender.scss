@@ -1,6 +1,6 @@
 
-.main_post {
- 
+.main_post { 
+
   .main_wrapper {
       padding-top: 1rem;
       .main_detail-box {
@@ -31,7 +31,7 @@
 float: left;
 width: 80%;
 max-width: 200px;
-margin:50px auto;
+margin: auto;
 }
 button.accordion {
 width: 100%;
@@ -84,9 +84,15 @@ cursor: pointer;
 
 //Sidebar
 .sidebar {
-position: absolute;
+
 left: 1em;
 @include for-phone-only {
   position: relative;
 }
+}
+
+.display-sidebar {
+  display: flex;
+  flex-direction: row;
+ 
 }
