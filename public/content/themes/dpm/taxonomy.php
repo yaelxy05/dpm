@@ -1,14 +1,14 @@
 <?php
 get_header();
 ?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 
 <main class="main">
 
-<div class="sidebar">
-  <form>
+    <div class="main_box">
+        <h1 class="main_h1"><?php single_cat_title('', true) ?></h1>
+
+        <div class="sidebar">
+        <form>
             <div class="container">
                 <button class="accordion">Age</button>
                 <div class="accordion-content">
@@ -58,11 +58,6 @@ get_header();
         </form>
       
 </div>
-
-        <div class="main_box">
-        <h1 class="main_h1"><?php single_cat_title('', true) ?></h1>
-
-        
 
      <div class="main_post">
 
