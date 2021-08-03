@@ -35,6 +35,14 @@ function dpm_load_assets()
         null,   
         true    // true pour dire que le javascript sera chargé à la fin de la balise <body>
     );
+
+    wp_enqueue_script(
+        'accordion-js',  // "nom du fichier js
+        get_theme_file_uri('assets/js/accordion.js'),
+        [],
+        null,   
+        true    // true pour dire que le javascript sera chargé à la fin de la balise <body>
+    );
 }
 add_action('wp_enqueue_scripts', 'dpm_load_assets');
 
