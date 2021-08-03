@@ -1,5 +1,11 @@
+.main_box {
+  width: 100%;
+}
 
 .main_post { 
+  max-width: 1600px;
+  padding-left: 0%;
+  margin-left: 0em;
 
   .main_wrapper {
       padding-top: 1rem;
@@ -28,10 +34,8 @@
 
 //Accordion
 .container {
-float: left;
-width: 80%;
 max-width: 200px;
-margin: auto;
+
 }
 button.accordion {
 width: 100%;
@@ -84,17 +88,22 @@ cursor: pointer;
 
 //Sidebar
 .sidebar {
-float: left;
-position: absolute;
-left: 1em;
-@include for-phone-only {
-  position: relative;
-}
+// padding-top: 3em;
+// float: left;
+// position: absolute;
+// left: 1em;
+// @include for-phone-only {
+//  position: relative;
+// }
+padding-top: 1em;
 }
 
 .display-sidebar {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
   
  
 }
