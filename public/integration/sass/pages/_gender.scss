@@ -1,92 +1,92 @@
 
 .main_post {
  
-    .main_wrapper {
-        padding-top: 1rem;
-        .main_detail-box {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 1rem;
-            
-            
-            .detail{
-                color: #2b2e33;
-                font-weight:normal;
-            }
-            .prix {
-                font-weight: bold;
-                font-size: 1.5rem;
-                margin: 1rem 0;
-            }
-        }
-    }
-    
-    
+  .main_wrapper {
+      padding-top: 1rem;
+      .main_detail-box {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1rem;
+          
+          
+          .detail{
+              color: #2b2e33;
+              font-weight:normal;
+          }
+          .prix {
+              font-weight: bold;
+              font-size: 1.5rem;
+              margin: 1rem 0;
+          }
+      }
+  }
+  
+  
 }
 
 
 
 //Accordion
 .container {
-  float: left;
-  width: 80%;
-  max-width: 200px;
-  margin:50px auto;
+float: left;
+width: 80%;
+max-width: 200px;
+margin:50px auto;
 }
 button.accordion {
-  width: 100%;
-  background-color: white;
-  border: none;
-  border-bottom: 1px solid #F4CFDF;
-  outline: none;
-  text-align: left;
-  padding: 15px 20px;
-  font-size: 1em;
-  color: #5784BA;
-  cursor: pointer;
-  transition: background-color 0.2s linear;
+width: 100%;
+background-color: white;
+border: none;
+border-bottom: 1px solid #F4CFDF;
+outline: none;
+text-align: left;
+padding: 15px 20px;
+font-size: 1em;
+color: #5784BA;
+cursor: pointer;
+transition: background-color 0.2s linear;
 }
 button.accordion:after {
-  font-family: FontAwesome;
-  content: '\f107';
-  font-family: "fontawesome";
-  font-size: 1em;
-  float: right;
+font-family: FontAwesome;
+content: '\f107';
+font-family: "fontawesome";
+font-size: 1em;
+float: right;
 }
 button.accordion.is-open:after {
-  content: '\f106';
+content: '\f106';
 }
 button.accordion:hover, button.accordion.is-open {
-  background-color:#F4CFDF;
+background-color:#F4CFDF;
 }
 .accordion-content {
-  background-color: white;
-  border-left: 1px solid whitesmoke;
-  border-right: 1px solid whitesmoke;
-  padding: 0 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-in-out;
+background-color: white;
+border-left: 1px solid whitesmoke;
+border-right: 1px solid whitesmoke;
+padding: 0 20px;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-in-out;
 }
 .filter-button {
-  width: 100%;
-  background-color: white;
-  border: none;
-  border-bottom: 1px solid #F4CFDF;
-  outline: none;
-  text-align: left;
-  padding: 0.9em;
-  font-size: 1em;
-  color: pink;
-  cursor: pointer;
-  
+width: 100%;
+background-color: white;
+border: none;
+border-bottom: 1px solid #F4CFDF;
+outline: none;
+text-align: left;
+padding: 0.9em;
+font-size: 1em;
+color: pink;
+cursor: pointer;
+
 }
-  
+
 //Sidebar
 .sidebar {
-  position: absolute;
-  left: 1em;
-  @include for-phone-only {
-    position: relative;
-  }
+position: absolute;
+left: 1em;
+@include for-phone-only {
+  position: relative;
+}
 }
