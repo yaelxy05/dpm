@@ -55,6 +55,19 @@ class CartModel extends CoreModel
         );
     }
 
+    public function deleteProductForUser($userId, $productId)
+    {
+        $where = [
+            'user_id' => $userId,
+            'product_id' => $productId
+        ];
+        $this->database->delete(
+            'cart_products',
+            $where
+        );
+    }
+
+
     // TODO: verify that it's ok
     public function update($id, $productId)
     {

@@ -11,6 +11,8 @@ class CartController {
         add_action('template_redirect', [$this, 'handle_add_to_cart']);
 
         add_action('template_redirect', [$this, 'handle_previous_archive_page']);
+
+        add_action('template_redirect', [$this, 'handle_delete_to_cart']);
     }
 
     // Allow us to set the url of one of those pages : filles/garcon/bebe, to redirect after an add to cart
@@ -45,6 +47,21 @@ class CartController {
             }
         }
         
+    }
+
+    public function handle_delete_to_cart($product) {
+
+        if(isset($_POST['dpm_delete_to_cart'])) {
+
+            $id = $_POST['product_id'];
+
+            $user_id = get_current_user_id();
+
+            $model = new CartModel();
+
+            $model->deleteProductForUser($user_id, $id);
+
+        }
     }
 }
 

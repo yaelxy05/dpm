@@ -1,0 +1,114 @@
+.main {
+    min-height: 100%;
+    @include flexcenter;
+    flex-direction: column;
+    margin: $gutter +4  0;
+    @include for-phone-only {
+        margin: 2rem 0;
+    }
+
+    .main_h1 {
+        @include h1Main;
+        margin: $gutter  0;
+    }  
+
+    .main_create--input-box {
+        background-color: $background-input;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 25rem;
+        min-height: 100vh;
+        margin: $gutter  0;
+        @include for-phone-only {
+            width: 13rem;
+        }
+        
+        
+        // box principal of form
+        .acf-form-fields {
+            color: $color-title;
+            margin: 1rem 0;
+            .wp-media-buttons {
+                display: none;
+            }
+            
+            .acf-field {
+                .acf-input-wrap {
+                    border: none;
+                    .acf-is-appended {
+                        border: none;
+                        
+                        &:focus {
+                            outline: none;
+                            border-bottom: solid 3px $color-girl;
+                        }
+                    }
+                    
+                    #acf-_post_title {
+                        border: none;
+                        &:focus {
+                            outline: none;
+                            border-bottom: solid 3px $color-girl;
+                        }
+                    }
+                }
+                
+            }
+
+            .acf-fields {
+                
+                .acf-label {
+                    padding: 1rem 0;
+                }
+                .acf-input {
+                    height: 2.3rem;
+                    width: 20rem;
+                    border: none;
+                    color: $color-button;
+                    border-radius: 10px;
+                }
+
+
+                    
+            }
+        }
+        }
+        span {
+            color: $color-button;
+            font-weight: bold;
+        }
+
+        .acf-required {
+            color: red;
+        }
+        .acf-input-append {
+            border: none;
+            background: none;
+            font-weight: 900;
+        }
+
+        .acf-button {
+            text-decoration: none;
+            color: $color-button;
+            font-weight: 900;
+        }
+        .acf-form-submit {
+            @include flexcenter;
+
+            .acf-button {
+                @include buttonGreen;
+                margin-bottom: $gutter;
+                padding: 0.5rem;
+                height: 3.4rem;
+                width: 12rem;
+                border-radius: 5px;
+                cursor: pointer!important;
+            }
+        }
+    }
+
+
+  

@@ -43,7 +43,12 @@ function special_nav_class ($classes,$item) {
   }
   return $classes;
 }
+// once connecter user redirect on home page
+function admin_default_page() {
+  return get_home_url();
+}
 
+add_filter('login_redirect', 'admin_default_page');
 
 add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 add_action('after_setup_theme','dpm_supports');

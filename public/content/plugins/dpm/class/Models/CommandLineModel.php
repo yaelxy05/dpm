@@ -31,12 +31,11 @@ class CommandLineModel extends CoreModel
     }
 
 
-    public function insert($id, $commandId, $productName, $price = 0)
+    public function insert($commandId, $productName, $price = 0)
     {
         // STEP WP CUSTOMTABLE insert
         // le tableau data stocke les données à insérer dans la table
         $data = [
-            'id' => $id,
             'command_id' => $commandId,
             'name' => $productName,
             'price' => $price,

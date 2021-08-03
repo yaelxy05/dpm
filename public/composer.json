@@ -21,7 +21,8 @@
 
     "require": {
         "johnpbloch/wordpress": "^5.6",
-        "wpackagist-theme/twentytwentyone": "*"
+        "wpackagist-theme/twentytwentyone": "*",
+        "symfony/var-dumper": "^5.3"
     },
 
     "scripts": {
@@ -57,4 +58,3 @@
         ]
     }
 }
-

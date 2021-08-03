@@ -34,6 +34,7 @@ get_header();
 
                 </div>
 
+
                 <button class="accordion">Type de vêtements</button>
                 <div class="accordion-content">
                     <ul class="accordion_box">
@@ -48,6 +49,7 @@ get_header();
                         <li><input type="checkbox" name="type[]" value="puericulture">Puériculture</li>
                         <li><input type="checkbox" name="type[]" value="accessoires">Accessoires</li>
                     </ul>
+
                 </div>
 
 

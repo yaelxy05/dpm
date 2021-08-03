@@ -39,7 +39,6 @@ class UserController extends CoreController
         else {
             return $query->posts[0];
         }
-
     }
 
 
