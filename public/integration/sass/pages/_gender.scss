@@ -84,7 +84,8 @@ cursor: pointer;
 
 //Sidebar
 .sidebar {
-
+float: left;
+position: absolute;
 left: 1em;
 @include for-phone-only {
   position: relative;
@@ -94,5 +95,6 @@ left: 1em;
 .display-sidebar {
   display: flex;
   flex-direction: row;
+  
  
 }
