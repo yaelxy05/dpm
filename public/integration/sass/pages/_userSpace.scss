@@ -24,6 +24,8 @@
         }
 
         .main_sale-box {
+            display: flex;
+            flex-direction: row;
             border-radius: 15px;
             overflow: hidden;
             background-color: $background-input;
