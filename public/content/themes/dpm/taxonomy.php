@@ -73,7 +73,7 @@ get_header();
                 <div class="main_wrapper">
                     <!-- display of picture -->
                     <?php the_category() ?>
-                    <?php the_post_thumbnail('post-thumbnail', ['class' => 'main_img', 'alt' => 'article-product']) ?>
+                    <a href="<?php the_permalink()?>"><?php the_post_thumbnail('post-thumbnail', ['class' => 'main_img', 'alt' => 'article-product']) ?>
                     <h2 class="main_h2"><?php the_title() ?> </h2>
                     <div class="main_detail-box">
                         <a href="<?php the_permalink() ?>">
