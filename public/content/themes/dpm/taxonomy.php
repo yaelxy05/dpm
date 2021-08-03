@@ -55,7 +55,17 @@ get_header();
                         <button class="accordion">Couleur</button>
                         <div class="accordion-content">
                             <ul class="accordion_box">
-                                <li><input type="checkbox" name="type[]" value="hauts-t-shirt">Hauts – T-shirts</li>
+                                <li><input type="checkbox" name="couleur[]" value="blanc">Blanc</li>
+                                <li><input type="checkbox" name="couleur[]" value="bleu">Bleu</li>
+                                <li><input type="checkbox" name="couleur[]" value="gris">Gris</li>
+                                <li><input type="checkbox" name="couleur[]" value="jaune">Jaune</li>
+                                <li><input type="checkbox" name="couleur[]" value="marron">Marron</li>
+                                <li><input type="checkbox" name="couleur[]" value="noir">Noir</li>
+                                <li><input type="checkbox" name="couleur[]" value="orange">Orange</li>
+                                <li><input type="checkbox" name="couleur[]" value="rose">Rose</li>
+                                <li><input type="checkbox" name="couleur[]" value="rouge">Rouge</li>
+                                <li><input type="checkbox" name="couleur[]" value="vert">Vert</li>
+                                <li><input type="checkbox" name="couleur[]" value="violet">Violet</li>
 
                             </ul>
 
