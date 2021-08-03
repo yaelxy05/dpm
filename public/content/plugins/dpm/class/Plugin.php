@@ -138,7 +138,9 @@ class Plugin
             [
                 'label' => 'Couleur',
                 'hierarchical' => true,
-                'public' => true
+                'public' => true,
+                'show_in_quick_edit' => false,
+                'meta_box_cb' => false,
             ]
         );
     }
@@ -151,7 +153,9 @@ class Plugin
             [
                 'label' => 'Age',
                 'hierarchical' => true,
-                'public' => true
+                'public' => true,
+                'show_in_quick_edit' => false,
+                'meta_box_cb' => false,
             ]
         );
     }
@@ -180,7 +184,9 @@ class Plugin
             [
                 'label' => 'Type',
                 'hierarchical' => true,
-                'public' => true
+                'public' => true,
+                'show_in_quick_edit' => false,
+                'meta_box_cb' => false,
             ]
         );
     }
