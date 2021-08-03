@@ -17,6 +17,8 @@ class Router
 
         add_rewrite_rule('^profil$', 'index.php?is_profile=1', 'top');
         add_rewrite_rule('^panier$', 'index.php?is_cart=1', 'top');
+        add_rewrite_rule('^commande$', 'index.php?is_command=1', 'top');
+
 
         // Wp records routes in Database, we must refresh routes
         flush_rewrite_rules();
@@ -25,6 +27,7 @@ class Router
             // STEP WP PLUGIN ROUTING Wordpress must spy the "virtual" variable custom-route
             $query_vars[] = 'is_profile';
             $query_vars[] = 'is_cart';
+            $query_vars[] = 'is_command';
             return $query_vars;
         });
 
@@ -46,6 +49,15 @@ class Router
               
                // we say to Wordpress what touch he has to change
                 $template =  get_stylesheet_directory() . '/templates/cart.php';
+            }
+
+                 // we get the "virtual" variable custom-route
+            // same as :  $customRoute = filter_input(INPUT_GET, 'custom-route');
+            $isCart = get_query_var('is_command');
+            if ($isCart) {
+              
+               // we say to Wordpress what touch he has to change
+                $template =  get_stylesheet_directory() . '/templates/command.php';
             }
 
             // we return the template the Wordpress was about to use

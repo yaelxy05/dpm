@@ -5,6 +5,7 @@ namespace DPM;
 
 use DPM\Router;
 use DPM\Controllers\CartController;
+use DPM\Controllers\CheckoutController;
 use DPM\Models\CartModel;
 use DPM\Models\CommandLineModel;
 
@@ -26,7 +27,11 @@ class Plugin
         
         $registration = new Registration();
 
+        // Handle the cart functionnalities
         new CartController();
+
+        // Handle the checkout functionnalities
+        new CheckoutController();
 
         $this->router = new Router();
 
@@ -183,9 +188,7 @@ class Plugin
                 'hierarchical' => false,
                 'menu_icon' => 'dashicons-cart',
                 'supports' => [
-                    'title',
-                    'thumbnail',
-                    'editor',
+                    'title'
                 ]
             ]
         );
