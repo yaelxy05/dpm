@@ -9,7 +9,7 @@ $cartProducts = $cartModel->getUserCart(get_current_user_id());
 ?>
 
 <main class="main">
-    <h1 class="main_h1">Commande</h1>
+    <h1 class="main_h1">Votre commande</h1>
     <div class="cart_wrapper">
 
         <?php $total_price = 0; ?>
