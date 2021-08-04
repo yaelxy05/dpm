@@ -18,6 +18,8 @@ class Router
         add_rewrite_rule('^profil$', 'index.php?is_profile=1', 'top');
         add_rewrite_rule('^panier$', 'index.php?is_cart=1', 'top');
         add_rewrite_rule('^commande$', 'index.php?is_command=1', 'top');
+        add_rewrite_rule('^a-propos$', 'index.php?is_about=1', 'top');
+        add_rewrite_rule('^espace-utilisateur$', 'index.php?is_userSpace=1', 'top');
 
 
         // Wp records routes in Database, we must refresh routes
@@ -28,6 +30,8 @@ class Router
             $query_vars[] = 'is_profile';
             $query_vars[] = 'is_cart';
             $query_vars[] = 'is_command';
+            $query_vars[] = 'is_about';
+            $query_vars[] = 'is_userSpace';
             return $query_vars;
         });
 
@@ -59,6 +63,26 @@ class Router
                // we say to Wordpress what touch he has to change
                 $template =  get_stylesheet_directory() . '/templates/command.php';
             }
+
+                 // we get the "virtual" variable custom-route
+            // same as :  $customRoute = filter_input(INPUT_GET, 'custom-route');
+            $isAbout = get_query_var('is_about');
+            if ($isAbout) {
+              
+               // we say to Wordpress what touch he has to change
+                $template =  get_stylesheet_directory() . '/templates/about.php';
+            }
+
+                 // we get the "virtual" variable custom-route
+            // same as :  $customRoute = filter_input(INPUT_GET, 'custom-route');
+            $isUserSpace = get_query_var('is_userSpace');
+            if ($isUserSpace) {
+              
+               // we say to Wordpress what touch he has to change
+                $template =  get_stylesheet_directory() . '/templates/userSpace.php';
+            }
+
+
 
             // we return the template the Wordpress was about to use
             return $template;
