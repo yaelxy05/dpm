@@ -6,6 +6,8 @@ require __DIR__ . '/includes/load-assets.php';
 // ===========================================================================================
 // theme configuration
 require __DIR__ . '/includes/theme-configuration.php';
+
 // ===========================================================================================
 // acf configuration
 require __DIR__ . '/includes/acf-configuration.php';
+

@@ -4,11 +4,6 @@
 // ACF Configuration
 // ==========================================================================================
 
-// once connecter user redirect on home page
-function admin_default_page() {
-  return get_home_url();
-}
-
 // Modify ACF Form Label for Post Title Field
 function wd_post_title_acf_name( $field ) {
           $field['label'] = 'Titre du produit';

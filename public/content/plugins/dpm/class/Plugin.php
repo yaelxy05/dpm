@@ -76,7 +76,46 @@ class Plugin
             [$this, 'createUserProfileCustomPostType']
         );
 
+        add_action(
+            'add_meta_boxes',
+            [$this, 'registerMetabox']
+        );
+
     }
+
+    public function registerMetabox()
+    {
+        add_meta_box('id', 'Ligne de commande', [$this, 'command_display_callback'], 'command' );
+    }
+
+    public function command_display_callback(){
+        global $post;
+        // Je crée le model 
+        $commandLineModel = new CommandLineModel();
+        
+        // Je l'utilise pour récupérer les lignes corresponda
+        $commands = $commandLineModel->getAllCommandLineByCommand($post->ID);
+        $author_id = get_post_field( 'post_author', $post->ID );
+        $author_name = get_the_author_meta( 'display_name', $author_id );
+        
+        ?>
+        <h2>Commande numéro <?= $post->ID; ?></h2>
+        <p>Client : <?= $author_name?></p>
+        <table>
+            <thead>
+                <td>Nom du produit</td>
+                <td>Prix</td>
+            </thead>
+            <?php foreach($commands as $command) : ?>
+                <tr>
+                    <td><?= $command->name ?></td>
+                    <td><?= $command->price ?>€</td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+        <?php 
+    }
+
 
     public function activate()
     {
@@ -99,7 +138,9 @@ class Plugin
             [
                 'label' => 'Couleur',
                 'hierarchical' => true,
-                'public' => true
+                'public' => true,
+                'show_in_quick_edit' => false,
+                'meta_box_cb' => false,
             ]
         );
     }
@@ -112,7 +153,9 @@ class Plugin
             [
                 'label' => 'Age',
                 'hierarchical' => true,
-                'public' => true
+                'public' => true,
+                'show_in_quick_edit' => false,
+                'meta_box_cb' => false,
             ]
         );
     }
@@ -141,7 +184,9 @@ class Plugin
             [
                 'label' => 'Type',
                 'hierarchical' => true,
-                'public' => true
+                'public' => true,
+                'show_in_quick_edit' => false,
+                'meta_box_cb' => false,
             ]
         );
     }

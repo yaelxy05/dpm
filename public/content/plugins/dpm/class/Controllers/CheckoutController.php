@@ -36,6 +36,8 @@ class CheckoutController {
             foreach($products as $product) {
                 $commandLineModel->insert($commandId, $product->post_title, get_field('prix', $product->ID));
             }
+
+            // On supprime tous les produits présents dans la table cart_product qui correspondent au user_id courant
         }
         
     }

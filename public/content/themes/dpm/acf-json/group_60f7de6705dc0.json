@@ -3,25 +3,26 @@
     "title": "Champs vêtements",
     "fields": [
         {
-            "key": "field_60f7de7e45e49",
-            "label": "Prix",
-            "name": "prix",
-            "type": "number",
+            "key": "field_61094b6e2ff65",
+            "label": "Type",
+            "name": "type",
+            "type": "taxonomy",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "20.00",
-            "prepend": "",
-            "append": "€",
-            "min": "",
-            "max": "",
-            "step": ""
+            "taxonomy": "type",
+            "field_type": "radio",
+            "allow_null": 0,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "multiple": 0
         },
         {
             "key": "field_6107a0d97acfe",
@@ -43,6 +44,50 @@
             "save_terms": 1,
             "load_terms": 1,
             "return_format": "object",
+            "multiple": 0
+        },
+        {
+            "key": "field_6109562b4a786",
+            "label": "Age",
+            "name": "age",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "age",
+            "field_type": "radio",
+            "allow_null": 0,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_6109577a96baa",
+            "label": "Couleur",
+            "name": "couleur",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "color",
+            "field_type": "radio",
+            "allow_null": 0,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
             "multiple": 0
         },
         {
@@ -68,6 +113,46 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_60f7de7e45e49",
+            "label": "Prix",
+            "name": "prix",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "20.00",
+            "prepend": "",
+            "append": "€",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_6107b67bf2f6c",
+            "label": "Statut",
+            "name": "statut",
+            "type": "true_false",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Actif",
+            "ui_off_text": "Inactif"
         }
     ],
     "location": [
@@ -87,5 +172,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1627890406
+    "modified": 1628002484
 }
