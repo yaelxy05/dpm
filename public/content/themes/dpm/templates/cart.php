@@ -24,7 +24,7 @@ $cartProducts = $cartModel->getUserCart(get_current_user_id());
                     <p class="cart_price"><?php the_field('prix'); ?> €</p>
                     <form method="post">
                         <input type="hidden" name="product_id" value="<?php the_id(); ?>">
-                        <button type="submit" name="dpm_delete_to_cart"><i  class="fas fa-trash-alt"></i></button>
+                        <button class="button_trash" type="submit" name="dpm_delete_to_cart"><i  class="fas fa-trash-alt"></i></button>
                     </form>
                 </div>
             <?php endforeach; wp_reset_postdata(); ?>
@@ -43,7 +43,7 @@ $cartProducts = $cartModel->getUserCart(get_current_user_id());
                     <p><?= $total_price + 3.90; ?>€</p>
                 </div>
                 <div class="cart_total-button">
-                    <a href="<?php echo get_home_url() . '/commande'; ?>">Procéder à la commande</a>
+                    <a href="<?php echo get_home_url() . '/commande'; ?>">Validez le panier</a>
                 </div>
             </div>
 

@@ -55,10 +55,10 @@
                 }
             }
 
-            button {
+            .button_trash {
                 color:black;
                 border: none;
-                background-color: #B6D8F2 0%;
+                background-color: $background-input 0%;
             }
         }
     }
@@ -71,6 +71,7 @@
             border-radius: 10px;
             box-shadow: 2px 1px 4px rgba(94, 94, 94, 0.589);
             background: #d0e8fa77;
+            margin: 1rem 0;
             @include for-phone-only {
                 width: 10rem;
             }
@@ -87,17 +88,18 @@
             }
     
             .cart_total-button {
-                display: flex;
-                justify-content: center;
-                height: 6rem;
+                @include flexcenter;
+                margin: 1rem;
                 
-                button {
+                a {
                     @include buttonGreen;
+                    @include flexcenter;
                     margin-bottom: $gutter;
                     padding: 0.5rem;
                     height: 3.4rem;
                     width: 8.3rem;
                     border-radius: 5px;
+                    text-decoration: none;
                 }
             }
         }   
