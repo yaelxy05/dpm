@@ -1,3 +1,5 @@
+<?php handle_flash_message(); ?>
+
 <footer class="section footer"> 
 
     <img class="footer-logo" src="<?= get_theme_file_uri('assets/images/IMG_2820.png') ?>" alt="logo">

@@ -1,5 +1,13 @@
 <?php
 
+add_filter( 'wp_nav_menu_items', 'nav_menu_add_search', 10, 2 );
+add_filter('login_redirect', 'admin_default_page');
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+add_action('after_setup_theme','dpm_supports');
+add_filter('nav_menu_css_class', 'dpm_menu_class');
+add_filter('nav_menu_link_attributes', 'dpm_menu_link_class');
+
+
 // ==========================================================================================
 // display title tag 
 // ==========================================================================================
@@ -27,7 +35,7 @@ function dpm_menu_link_class($attrs)
 /**
  * Add icons
  */
-add_filter( 'wp_nav_menu_items', 'nav_menu_add_search', 10, 2 );
+
 function nav_menu_add_search( $items, $args ) {
 	if ( in_array($args->theme_location,['header','header-mobile'])) {
 		$menulink = '<li> <a href="http://localhost/apo/il-etait-plusieurs-doigts/public/panier/"><i class="fas fa-shopping-bag icon"></i></a></li>';
@@ -49,8 +57,4 @@ function admin_default_page() {
   return get_home_url();
 }
 
-add_filter('login_redirect', 'admin_default_page');
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-add_action('after_setup_theme','dpm_supports');
-add_filter('nav_menu_css_class', 'dpm_menu_class');
-add_filter('nav_menu_link_attributes', 'dpm_menu_link_class');
+add_image_size('product-card', 240, 240, true);

@@ -5,19 +5,19 @@
 // ==========================================================================================
 
 // Modify ACF Form Label for Post Title Field
-function wd_post_title_acf_name( $field ) {
+function dpm_post_title_acf_name( $field ) {
           $field['label'] = 'Titre du produit';
      return $field;
 }
-add_filter('acf/load_field/name=_post_title', 'wd_post_title_acf_name');
+add_filter('acf/load_field/name=_post_title', 'dpm_post_title_acf_name');
 
 // Modify ACF Form Label for Post Content Field
-function wd_post_content_acf_name( $field ) {
+function dpm_post_content_acf_name( $field ) {
      
           $field['label'] = 'Description';
      return $field;
 }
-add_filter('acf/load_field/name=_post_content', 'wd_post_content_acf_name');
+add_filter('acf/load_field/name=_post_content', 'dpm_post_content_acf_name');
 
 // acf/update_value/name={$field_name} - filter for a specific field based on it's name
 add_filter('acf/update_value/name=image_du_produit', 'acf_set_clothing_featured_image', 1, 3);
