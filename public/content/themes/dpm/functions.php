@@ -25,7 +25,7 @@ function handle_flash_message()  {
     unset($_SESSION['flash-message']);
 
     ?>
-        <div class="flash-message" style="position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); padding: 30px; background-color: green; ">
+        <div class="flash-message">
             <?php echo $message; ?>
         </div>
 
