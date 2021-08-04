@@ -35,7 +35,7 @@ get_header();
                 while ( $crushClothingQuery->have_posts() ) : $crushClothingQuery->the_post(); ?>
                     <div class="main_wrapper">
                         <!-- display of picture -->
-                        <a href="<?php the_permalink()?>"><?php the_post_thumbnail('post-thumbnail', ['class' => 'main_img', 'alt'=> 'article-product'])?> 
+                        <a href="<?php the_permalink()?>"><?php the_post_thumbnail('product-card', ['class' => 'main_img', 'alt'=> 'article-product'])?> 
                         <h2 class="main_h2"><?php the_title() ?></h2>
                         <a href="<?php the_permalink()?>"> </a>
                     </div>
