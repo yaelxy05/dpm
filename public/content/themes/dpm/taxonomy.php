@@ -17,7 +17,7 @@ get_header();
                                 <?php 
                                     $ages = get_terms([
                                         'taxonomy' => 'age',
-                                        'orderby' => 'name'
+                                        'orderby' => 'name',
                                     ]);
 
                                     foreach($ages as $age) :
