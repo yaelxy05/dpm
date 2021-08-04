@@ -37,9 +37,6 @@ $cartProducts = $cartModel->getUserCart(get_current_user_id());
             <p><?= $total_price + 3.90; ?>€</p>
         </div>
         <div class="cart_total-button">
-            <form method="post">
-                <button name="process_command">Commande</button>
-            </form>
         </div>
     </div>
 </main>
