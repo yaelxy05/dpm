@@ -78,7 +78,6 @@ get_header();
     $args = [
         'posts_per_page' => 4,
         'post_type' => 'clothing',
-        
     ];
 
     $newClothingQuery = new WP_Query($args); 
@@ -88,7 +87,7 @@ get_header();
         while ( $newClothingQuery->have_posts() ) : $newClothingQuery->the_post(); ?>
             <div class="main_wrapper">
                 <!-- display of picture -->
-                <a href="<?php the_permalink()?>"><?php the_post_thumbnail('post-thumbnail', ['class' => 'main_img', 'alt'=> 'article-product'])?> 
+                <a href="<?php the_permalink()?>"><?php the_post_thumbnail('product-card', ['class' => 'main_img', 'alt'=> 'article-product'])?> 
                 <h2 class="main_h2"><?php the_title() ?></h2>
                 <!-- diplay of excerpt -->
                 <a href="<?php the_permalink()?>"> </a>
