@@ -28,15 +28,18 @@
             }
             
             .main_wrapper {
-                height: 20rem;
+                display: flex;
+                justify-content: flex-start;
+                height: 22rem;
                 width: 15rem;
                 border: $color-boy solid 0.2px;
                 border-radius: 10px;
                 box-shadow: 2px 1px 12px rgba($color: #cfcfcf, $alpha: 1.0);
                 margin: 2rem;
+
         
                 .main_img {
-                    height: 15rem;
+                    height: 17rem;
                     width: 100%;
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;    
