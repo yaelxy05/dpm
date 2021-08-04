@@ -24,6 +24,7 @@ get_header();
                 'post_type' => 'clothing', // Enregistrer dans clothing
                 'post_status'   => 'publish'
             ),
+            'uploader' => 'basic',
             'submit_value' => 'Vendre un vêtement', // Intitulé du bouton
             'updated_message' => "Votre annocne est bien en ligne.",
         );

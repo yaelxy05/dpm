@@ -37,10 +37,14 @@ class CartController {
 
             // si le produit est déjà dans le panier de l'utilisateur, on arrète tout, on met une erreur etc ..
             if($model->getProductByUserId($user_id, $productId)) {
+                $_SESSION['flash-message'] = 'Ce produit est déjà dans votre panier';
+
                 return;
             }
 
             $model->insert($user_id, $productId);
+
+            $_SESSION['flash-message'] = 'Le produit a bien été ajouté au panier';
 
             // If the user went trough fille/garcon or bebe we redirect him to this page
             if(isset($_SESSION['previous_shop_page'])) {
