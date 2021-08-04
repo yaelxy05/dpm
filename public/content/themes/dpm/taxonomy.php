@@ -33,16 +33,16 @@ get_header();
                         <button class="accordion">Type de vêtements</button>
                         <div class="accordion-content">
                             <ul class="accordion_box">
-                                <li><input type="checkbox" name="type[]" value="hauts-t-shirts">Hauts – T-shirts</li>
-                                <li><input type="checkbox" name="type[]" value="pulls-gilets-sweats">Pulls – Gilets – Sweats</li>
-                                <li><input type="checkbox" name="type[]" value="manteaux-vestes">Manteaux – Vestes</li>
-                                <li><input type="checkbox" name="type[]" value="pantalons-shorts">Pantalons – Shorts</li>
-                                <li><input type="checkbox" name="type[]" value="robes-jupes">Robes – Jupes</li>
-                                <li><input type="checkbox" name="type[]" value="salopettes">Salopettes</li>
-                                <li><input type="checkbox" name="type[]" value="pyjamas">Pyjamas</li>
-                                <li><input type="checkbox" name="type[]" value="sous-vetements">Sous-vêtements</li>
-                                <li><input type="checkbox" name="type[]" value="puericulture">Puériculture</li>
-                                <li><input type="checkbox" name="type[]" value="accessoires">Accessoires</li>
+                                <?php 
+                                        $types = get_terms([
+                                            'taxonomy' => 'type',
+                                            
+                                        ]);
+
+                                        foreach($types as $type) :
+                                    ?>
+                                        <li><input type="checkbox" name="type[]" value="<?= $type->slug ?>"><?= $type->name ?></li>
+                                    <?php endforeach; ?>
                             </ul>
 
                         </div>
@@ -50,18 +50,16 @@ get_header();
                         <button class="accordion">Couleur</button>
                         <div class="accordion-content">
                             <ul class="accordion_box">
-                                <li><input type="checkbox" name="couleur[]" value="blanc">Blanc</li>
-                                <li><input type="checkbox" name="couleur[]" value="bleu">Bleu</li>
-                                <li><input type="checkbox" name="couleur[]" value="gris">Gris</li>
-                                <li><input type="checkbox" name="couleur[]" value="jaune">Jaune</li>
-                                <li><input type="checkbox" name="couleur[]" value="marron">Marron</li>
-                                <li><input type="checkbox" name="couleur[]" value="noir">Noir</li>
-                                <li><input type="checkbox" name="couleur[]" value="orange">Orange</li>
-                                <li><input type="checkbox" name="couleur[]" value="rose">Rose</li>
-                                <li><input type="checkbox" name="couleur[]" value="rouge">Rouge</li>
-                                <li><input type="checkbox" name="couleur[]" value="vert">Vert</li>
-                                <li><input type="checkbox" name="couleur[]" value="violet">Violet</li>
+                                    <?php 
+                                        $colors = get_terms([
+                                            'taxonomy' => 'color',
+                                            
+                                        ]);
 
+                                        foreach($colors as $color) :
+                                    ?>
+                                        <li><input type="checkbox" name="color[]" value="<?= $color->slug ?>"><?= $color->name ?></li>
+                                    <?php endforeach; ?>
                             </ul>
 
                         </div>
