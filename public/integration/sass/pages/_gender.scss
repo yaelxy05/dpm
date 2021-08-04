@@ -96,6 +96,7 @@ cursor: pointer;
 //  position: relative;
 // }
 padding-top: 1em;
+
 }
 
 .display-sidebar {
@@ -105,5 +106,24 @@ padding-top: 1em;
   justify-content: space-between;
   width: 100%;
   
- 
+  @include for-phone-only {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @include for-tablet-portrait-up {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @include for-tablet-landscape-up {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @include for-desktop-up {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
 }
