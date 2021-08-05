@@ -1,0 +1,23 @@
+.contact_display {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+
+    .contact_image {
+        max-width: 400px;
+        height: auto;
+        padding: 1em;
+    }
+
+    p{
+        padding: 1em;
+        line-height: 1.5em;
+        
+    }
+
+    a {
+        color:#5784BA;
+        text-decoration: underline;
+    }
+}
+

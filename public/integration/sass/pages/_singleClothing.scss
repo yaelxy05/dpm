@@ -33,12 +33,14 @@
                 display: flex;
             justify-content: center;
                 width: 27rem;
+            
                 @include for-phone-only {
                     width: 15rem;
                 }
                 .single_img {
                     height: 20rem;
                     width: auto; 
+                   
                     @include for-phone-only {
                         height: 10rem;
                     }
