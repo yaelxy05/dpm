@@ -20,6 +20,7 @@ class Router
         add_rewrite_rule('^commande$', 'index.php?is_command=1', 'top');
         add_rewrite_rule('^a-propos$', 'index.php?is_about=1', 'top');
         add_rewrite_rule('^espace-utilisateur$', 'index.php?is_userSpace=1', 'top');
+        add_rewrite_rule('^contact$', 'index.php?is_contact=1', 'top');
 
 
         // Wp records routes in Database, we must refresh routes
@@ -32,6 +33,7 @@ class Router
             $query_vars[] = 'is_command';
             $query_vars[] = 'is_about';
             $query_vars[] = 'is_userSpace';
+            $query_vars[] = 'is_contact';
             return $query_vars;
         });
 
@@ -80,6 +82,15 @@ class Router
               
                // we say to Wordpress what touch he has to change
                 $template =  get_stylesheet_directory() . '/templates/userSpace.php';
+            }
+
+             // we get the "virtual" variable custom-route
+            // same as :  $customRoute = filter_input(INPUT_GET, 'custom-route');
+            $isContact = get_query_var('is_contact');
+            if ($isContact) {
+              
+               // we say to Wordpress what touch he has to change
+                $template =  get_stylesheet_directory() . '/templates/contact.php';
             }
 
 
