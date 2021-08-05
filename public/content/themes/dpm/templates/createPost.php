@@ -3,9 +3,7 @@
 /**
  * Template Name: Create-post
  */
-?>
 
-<?php
 // WARNING display always acf_form_head(); in top and get_header(); in bottom
 acf_form_head();
 get_header();
@@ -26,7 +24,7 @@ get_header();
             ),
             'uploader' => 'basic',
             'submit_value' => 'Vendre un vêtement', // Intitulé du bouton
-            'updated_message' => "Votre annocne est bien en ligne.",
+            'updated_message' => "Votre annonce est bien en ligne.",
         );
 
         acf_form( $args ); // Afficher le formulaire
