@@ -1,7 +1,7 @@
 @mixin flexcenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flexAroundCenter {
@@ -11,20 +11,30 @@
 }
 
 @mixin for-phone-only {
-    @media (max-width: 599px) { @content; }
+  @media (max-width: 599px) {
+    @content;
   }
+}
 @mixin for-tablet-portrait-up {
-    @media (min-width: 600px) and (max-width: 899px) { @content; }
+  @media (min-width: 600px) and (max-width: 899px) {
+    @content;
   }
+}
 @mixin for-tablet-landscape-up {
-    @media (min-width: 900px) { @content; }
+  @media (min-width: 900px) {
+    @content;
   }
+}
 @mixin for-desktop-up {
-    @media (min-width: 1200px) { @content; }
+  @media (min-width: 1200px) {
+    @content;
   }
+}
 @mixin for-big-desktop-up {
-    @media (min-width: 1800px) { @content; }
+  @media (min-width: 1800px) {
+    @content;
   }
+}
 
 @mixin h1Main {
   color: $color-title;
@@ -41,7 +51,7 @@
 }
 
 @mixin buttonGreen {
-  background-color: #A7E0E0;
+  background-color: #a7e0e0;
   color: $color-button;
   font-weight: bold;
   border: none;
