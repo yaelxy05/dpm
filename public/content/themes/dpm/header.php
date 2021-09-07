@@ -31,7 +31,7 @@
                 </ul>
             </div>
             <div class="header_nav">
-            <span class="count"><?= getProductCount(); ?> </span>
+       
                     <?php wp_nav_menu([
                      'theme_location' => 'header',
                      'container' => false,

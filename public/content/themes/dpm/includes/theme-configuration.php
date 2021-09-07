@@ -44,6 +44,7 @@ function nav_menu_add_search( $items, $args ) {
           <i class="fas fa-shopping-bag icon"></i>
           <span class="count">' . getProductCount() . '</span>
         </a>
+        
       </li>';
     
 		$items .= $menulink;

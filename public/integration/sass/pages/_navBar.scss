@@ -1,168 +1,195 @@
 .header {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    height: 15rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 15rem;
+  width: 100%;
+  margin-bottom: 2rem;
+
+  .header_logo {
+    height: 10rem;
+    width: 20rem;
+    justify-content: flex-end;
+    padding-top: 4.6rem;
+    @include for-phone-only {
+      height: 5rem;
+      width: 10rem;
+      margin-left: 1.5rem;
+    }
+    @include for-tablet-portrait-up {
+      height: 7rem;
+      width: 15rem;
+      padding-top: 7.5rem;
+    }
+  }
+
+  .header_wrapper {
+    height: 100vh;
     width: 100%;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @include for-phone-only {
+      display: none;
+    }
 
-    .header_logo {
+    .header_login-li {
+      @include flexcenter;
+      width: 15rem;
+      height: 2.2rem;
+      background-image: linear-gradient(
+        to right,
+        #e9f4fd,
+        #e6ecfc,
+        #e8e3f8,
+        #eed9ee,
+        #f4cfdf
+      );
+      border-radius: $gutter;
+      box-shadow: 1px 1px 3px rgba(156, 156, 156, 0.363);
+      margin-top: 2rem;
+      margin-right: 1rem;
+      padding: 0 0.5rem;
+      text-decoration: none;
+      li {
+        padding-left: 0.5rem;
+
+        a {
+          text-decoration: none;
+          color: $color-title;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .header_nav {
+      width: 100%;
+      padding: 0 1rem;
+
+      .header_ul {
         height: 10rem;
-        width: 20rem;
-        justify-content: flex-end;
-        padding-top: 4.6rem;
-        @include for-phone-only {
-            height: 5rem;
-            width: 10rem;
-            margin-left: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        border-bottom: solid $color-border-bottom 2px;
+        padding-bottom: 1rem;
+        margin-left: 7rem;
+        position: relative;
+        .count {
+          text-decoration: none;
+          padding: 0 0.2rem;
+          color: $color-button;
+          border: solid 1px $color-border-bottom;
+          border-radius: 50px;
+          position: absolute;
+          top: 132px;
         }
+        .header_link {
+          color: $color-menu;
+          text-decoration: none;
+          font-size: 1.5rem;
+        }
+        .icon {
+          color: $color-menu;
+        }
+
+        .menu-item.active {
+          a {
+            color: $color-title;
+          }
+          @include for-phone-only {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .header_wrapper-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 6.6rem;
+    height: 100vh;
+    @include for-phone-only {
+      width: 80%;
+    }
+    .header_burger-icon {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      margin-right: 2rem;
+
+      span {
+        border-bottom: solid $color-border-bottom 2px;
+        width: 2rem;
+        padding-top: 0.7rem;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
         @include for-tablet-portrait-up {
-            height: 7rem;
-            width: 15rem;
-            padding-top: 7.5rem;
+          display: none;
         }
+        @include for-tablet-landscape-up {
+          display: none;
+        }
+      }
+    }
+    .header_burger-icon.open span:nth-child(2) {
+      opacity: 0;
+      left: -60px;
     }
 
-    .header_wrapper {
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    .header_nav-mobile {
+      animation: burgerAnimationToActive 0.5s ease-in-out;
+      display: none;
+      @include for-tablet-portrait-up {
+        display: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .count {
         @include for-phone-only {
-            display: none;
+          text-decoration: none;
+          padding: 0 0.2rem;
+          color: $color-button;
+          border: solid 1px $color-border-bottom;
+          border-radius: 50px;
         }
-
-        .header_login-li {
-            @include flexcenter;
-            width: 15rem;
-            height: 2.2rem;  
-            background-image: linear-gradient(to right, #e9f4fd, #e6ecfc, #e8e3f8, #eed9ee, #f4cfdf);
-            border-radius: $gutter;
-            box-shadow:1px 1px 3px rgba(156, 156, 156, 0.363) ;
-            margin-top: 2rem;
-            margin-right: 1rem;
-            padding: 0 0.5rem;
-            text-decoration: none;
-            li {
-                padding-left: 0.5rem;
-
-                a {
-                    text-decoration: none;
-                    color: $color-title;
-                    font-weight: bold;
-                }
-            }
-
-        }
-    
-        .header_nav {
-            width: 100%;
-            padding: 0 1rem;
-    
-            .header_ul {
-                height: 10rem;
-                display: flex;
-                justify-content: space-around;
-                align-items: flex-end;
-                border-bottom: solid $color-border-bottom 2px;
-                padding-bottom: 1rem;
-                margin-left: 7rem; 
-        
-                .header_link {
-                    color: $color-menu;
-                    text-decoration: none;
-                    font-size: 1.5rem;
-                }
-                .icon {
-                    color: $color-menu;
-                }
-
-                .menu-item.active{
-                    a {
-                        color: $color-title;
-                    }
-                    @include for-phone-only {
-                        display: none;
-                    }
-                }
-            }
-        }
+      }
     }
-    
-    .header_wrapper-mobile {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        margin-top: 6.6rem;
-        height: 100vh;
-        @include for-phone-only {
-            width: 80%;
-        }
-        .header_burger-icon {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 2rem;
-            margin-right: 2rem;
-           
-            span {
-                border-bottom: solid $color-border-bottom 2px;
-                width: 2rem;
-                padding-top: 0.7rem;
-                cursor: pointer;
-                transition: .5s ease-in-out;
-                @include for-tablet-portrait-up {
-                    display: none;
-                } 
-                @include for-tablet-landscape-up {
-                    display: none;
-                }   
-            }
-        }
-        .header_burger-icon.open span:nth-child(2) {
-            opacity: 0;
-            left: -60px;
-        }
-        
-        .header_nav-mobile {
-            animation: burgerAnimationToActive 0.5s ease-in-out;
-            display: none;
-            @include for-tablet-portrait-up {
-                display: none;
-            }
-        }
 
-        .actived {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            width: 75%;
-            height: 22rem;
-            padding: 0 2rem;
-            background: $color-girl-transparent;
-            z-index: 2;
-            
-            .header_link {
-                color: $color-menu;
-                text-decoration: none;
-            }
-            @include for-tablet-portrait-up {
-                display: none;
-            }
+    .actived {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 75%;
+      height: 22rem;
+      padding: 0 2rem;
+      background: $color-girl-transparent;
+      z-index: 2;
 
-            li {
-                padding: 0.5rem;
-            }
-        }
+      .header_link {
+        color: $color-menu;
+        text-decoration: none;
+      }
+      @include for-tablet-portrait-up {
+        display: none;
+      }
 
-        @keyframes burgerAnimationToActive {
-            0% {
-                transform: translateX(25%);
-            }
-            100% {
-                transform: translateX(0%);
-            }
-        }
+      li {
+        padding: 0.5rem;
+      }
     }
+
+    @keyframes burgerAnimationToActive {
+      0% {
+        transform: translateX(25%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+  }
 }
