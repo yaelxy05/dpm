@@ -38,7 +38,14 @@ function dpm_menu_link_class($attrs)
 
 function nav_menu_add_search( $items, $args ) {
 	if ( in_array($args->theme_location,['header','header-mobile'])) {
-		$menulink = '<li> <a href="http://localhost/apo/il-etait-plusieurs-doigts/public/panier/"><i class="fas fa-shopping-bag icon"></i></a></li>';
+		$menulink =  '
+      <li> 
+        <a href="http://localhost/apo/il-etait-plusieurs-doigts/public/panier/">
+          <i class="fas fa-shopping-bag icon"></i>
+          <span class="count">' . getProductCount() . '</span>
+        </a>
+      </li>';
+    
 		$items .= $menulink;
 	}
 	return $items;

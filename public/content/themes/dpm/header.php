@@ -26,11 +26,12 @@
                     <?php } else { ?>
                         <li><a href="<?= wp_login_url(); ?>">Se connecter</a></li>
                         <li>/</li>
-                        <li><a href="<?= wp_registration_url(); ?>"> Créer un compte</a></li>
+                        <li><a href="<?= wp_registration_url(); ?>"> Créer un compte</a></li>                 
                     <?php } ?>
                 </ul>
             </div>
             <div class="header_nav">
+            <span class="count"><?= getProductCount(); ?> </span>
                     <?php wp_nav_menu([
                      'theme_location' => 'header',
                      'container' => false,
@@ -46,7 +47,7 @@
                 </div>
             </div>
             <div class="header_nav-mobile">
-                
+            
                     <?php wp_nav_menu([
                      'theme_location' => 'header-mobile',
                      'container' => false,

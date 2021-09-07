@@ -15,6 +15,9 @@ require __DIR__ . '/includes/theme-configuration.php';
 // acf configuration
 require __DIR__ . '/includes/acf-configuration.php';
 
+// ===========================================================================================
+// Cart count
+require __DIR__ . '/includes/cart-count.php';
 
 function handle_flash_message()  {
     if(!isset($_SESSION['flash-message'])) {

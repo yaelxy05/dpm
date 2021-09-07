@@ -2,6 +2,7 @@
 
 namespace DPM\Models;
 
+use Symfony\Component\VarDumper\VarDumper;
 
 class CartModel extends CoreModel
 {
@@ -143,5 +144,24 @@ class CartModel extends CoreModel
 
         return $clothings;
     }
-}
 
+    public function getProductCount($userId) {
+        $sql = "
+        SELECT 
+            COUNT(*) as count
+            FROM `cart_products`
+            WHERE
+                user_id = %d
+        ";
+        
+        $count =  $this->executePreparedStatement(
+            $sql,
+            [
+                $userId,
+            ]
+        );
+        
+        return $count[0]->count;
+
+    }
+}
