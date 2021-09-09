@@ -1,6 +1,8 @@
 <?php get_header();
 global $post;
 $author_id = $post->post_author;
+$get_author_id = get_the_author_meta('ID');
+$get_author_gravatar = get_avatar_url($get_author_id, array('size' => 450));
 ?>
 
     <main class="main">
@@ -43,8 +45,17 @@ $author_id = $post->post_author;
                                 ?>
                             </p>
                         <?php endif; ?>
+                        <div class="single_author--box">
+                            <?php
+                                $get_author_id = get_the_author_meta('ID');
+                                $get_author_gravatar = get_avatar_url($get_author_id, array('size' => 450));
 
-                        <p class="single_author"><?php the_author_meta( 'display_name', $author_id ); ?></p>  
+                                echo get_avatar( get_the_author_meta('ID') );
+                            ?> 
+                           <p class="single_author"><?php the_author_meta( 'display_name', $author_id ); ?></p>  
+                            
+                        </div>           
+                        
 
                         <p class="single_price"><?php the_field('prix'); ?> €</p>
                          <form method="post">

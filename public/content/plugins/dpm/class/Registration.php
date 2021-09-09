@@ -123,6 +123,12 @@ class Registration
             <input required type="password" name="user_password" id="user_password"
             class="input" value="" size ="20" autocapitalize="off">
         </p>
+        <p>
+            <label for="avatar">Choose a profile picture:</label>
+            <input type="file"
+            id="avatar" name="avatar"
+            accept="image/png, image/jpeg">
+        </p>
         ';  
 
         echo $customFields;
