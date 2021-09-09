@@ -258,4 +258,18 @@ class Plugin
         );
 
     } 
+    public function createAuthorCustomTaxonomy()
+    {
+        register_taxonomy(
+            'author',
+            ['clothing'],
+            [
+                'label' => 'Auteur',
+                'hierarchical' => true,
+                'public' => true,
+                'show_in_quick_edit' => false,
+                'meta_box_cb' => false,
+            ]
+        );
+    }
 }

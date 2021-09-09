@@ -10,7 +10,7 @@ class Router
             [$this, 'registerRoutes']
         );
     }
-
+        
     public function registerRoutes()
     {
         // DOC WP PLUGIN Custom route https://developer.wordpress.org/reference/functions/add_rewrite_rule/
@@ -22,7 +22,7 @@ class Router
         add_rewrite_rule('^espace-utilisateur$', 'index.php?is_userSpace=1', 'top');
         add_rewrite_rule('^contact$', 'index.php?is_contact=1', 'top');
 
-
+      
         // Wp records routes in Database, we must refresh routes
         flush_rewrite_rules();
 

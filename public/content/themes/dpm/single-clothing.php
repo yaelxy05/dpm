@@ -1,6 +1,7 @@
-<?php get_header();?>
-
-
+<?php get_header();
+global $post;
+$author_id = $post->post_author;
+?>
 
     <main class="main">
         <h1 class="main_h1"><?php the_title(); ?></h1>
@@ -42,6 +43,8 @@
                                 ?>
                             </p>
                         <?php endif; ?>
+
+                        <p class="single_author"><?php the_author_meta( 'display_name', $author_id ); ?></p>  
 
                         <p class="single_price"><?php the_field('prix'); ?> €</p>
                          <form method="post">

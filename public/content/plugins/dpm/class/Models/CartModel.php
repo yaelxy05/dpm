@@ -146,6 +146,8 @@ class CartModel extends CoreModel
     }
 
     public function getProductCount($userId) {
+
+        // request for count cart product
         $sql = "
         SELECT 
             COUNT(*) as count
