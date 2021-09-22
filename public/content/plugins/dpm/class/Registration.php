@@ -51,6 +51,12 @@ class Registration
     }
 
 
+
+/*
+ * Save custom user profile data
+ *
+ */
+
     public function show_extra_profile_fields($user) {
         ?>
         <h3>Information Personnelles</h3>
@@ -69,6 +75,18 @@ class Registration
                 <th><label for="address">Adresse</label></th>
                 <td>
                     <input id="address" name="address" type="text" value="<?php echo esc_html( get_the_author_meta( 'address', $user->ID ) ); ?>">
+                </td>
+            </tr>
+        </table>
+
+        <table class="form-table">
+            <tr>
+                <th><label for="avatar">Avatar</label></th>
+                <td>
+                    <img src="<?php echo esc_attr( get_the_author_meta( 'image', $user->ID ) ); ?>" style="height:50px;">
+                    <input type="file" name="image" id="image" value="<?php echo esc_attr( get_the_author_meta( 'image', $user->ID ) ); ?>" class="regular-text" />
+                     <input type='submit' class="button-primary" value="Upload Image" id="uploadimage"/><br />
+                    <span class="description">Please upload your image for your profile.</span>
                 </td>
             </tr>
         </table>
@@ -91,6 +109,8 @@ class Registration
 
         update_user_meta( $user_id, 'address', $_POST['address'] );
 
+        update_user_meta( $user_id, 'image', $_POST['image'] );
+        
     }
 
 
@@ -126,16 +146,20 @@ class Registration
         <p>
             <label for="avatar">Choose a profile picture:</label>
             <input type="file"
-            id="avatar" name="avatar"
-            accept="image/png, image/jpeg">
+            id="avatar" name="user_avatar"
+            accept="image/png, image/jpeg" class="input" enctype="multipart/form-data">
         </p>
         ';  
 
         echo $customFields;
     }
 
+    
+
+
     public function checkRegistration($errors,$login, $email)
     {
+
         // Recuperation du mot de passe de l'utilisateur
         // recovery password user
         $password = filter_input(INPUT_POST, 'user_password');
@@ -198,6 +222,10 @@ class Registration
         // Get the address and use update post meta for this user
         $address = filter_input(INPUT_POST, 'user_address');
         update_user_meta( $userId, 'address', $address );
+
+        // Get the address and use update post meta for this user
+        $avatar = filter_input(INPUT_POST, 'user_avatar');
+        update_user_meta( $userId, 'avatar', $avatar );
 
         // enregistrement du mot de passe choisi par l'user
         $password = filter_input(INPUT_POST, 'user_password');

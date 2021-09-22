@@ -21,7 +21,8 @@ class Router
         add_rewrite_rule('^a-propos$', 'index.php?is_about=1', 'top');
         add_rewrite_rule('^espace-utilisateur$', 'index.php?is_userSpace=1', 'top');
         add_rewrite_rule('^contact$', 'index.php?is_contact=1', 'top');
-
+        add_rewrite_rule('^register$', 'index.php?is_register=1', 'top');
+        add_rewrite_rule('^login$', 'index.php?is_login=1', 'top');
       
         // Wp records routes in Database, we must refresh routes
         flush_rewrite_rules();
@@ -34,6 +35,8 @@ class Router
             $query_vars[] = 'is_about';
             $query_vars[] = 'is_userSpace';
             $query_vars[] = 'is_contact';
+            $query_vars[] = 'is_register';
+            $query_vars[] = 'is_login';
             return $query_vars;
         });
 
@@ -47,7 +50,22 @@ class Router
                // we say to Wordpress what touch he has to change
                 $template =  get_stylesheet_directory() . '/templates/profile.php';
             }
-
+            // we get the "virtual" variable custom-route
+            // same as :  $customRoute = filter_input(INPUT_GET, 'custom-route');
+            $isRegister = get_query_var('is_register');
+            if ($isRegister) {
+              
+               // we say to Wordpress what touch he has to change
+                $template =  get_stylesheet_directory() . '/templates/register.php';
+            }
+            // we get the "virtual" variable custom-route
+            // same as :  $customRoute = filter_input(INPUT_GET, 'custom-route');
+            $isLogin = get_query_var('is_login');
+            if ($isLogin) {
+              
+               // we say to Wordpress what touch he has to change
+                $template =  get_stylesheet_directory() . '/templates/login.php';
+            }
              // we get the "virtual" variable custom-route
             // same as :  $customRoute = filter_input(INPUT_GET, 'custom-route');
             $isCart = get_query_var('is_cart');

@@ -7,6 +7,7 @@ if (session_status() === PHP_SESSION_NONE) {
 // ===========================================================================================
 // load assets
 require __DIR__ . '/includes/load-assets.php';
+
 // ===========================================================================================
 // theme configuration
 require __DIR__ . '/includes/theme-configuration.php';
@@ -15,7 +16,6 @@ require __DIR__ . '/includes/theme-configuration.php';
 // acf configuration
 require __DIR__ . '/includes/acf-configuration.php';
 
-// ===========================================================================================
 // Cart count
 require __DIR__ . '/includes/cart-count.php';
 

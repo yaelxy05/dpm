@@ -38,6 +38,7 @@ wp_reset_postdata();
             <?php 
                 $user = wp_get_current_user();
                 //dd($user);
+                $avatar = get_user_meta($user->ID, 'avatar', true);
             ?>
 
             <a href=" http://localhost/apo/il-etait-plusieurs-doigts/public/create-post/"><button class="main_sale-box--button">+ Ajoutez un produit</button></a>
@@ -46,8 +47,10 @@ wp_reset_postdata();
                 <div class="main_boxP">
                     <p><?php echo $user->user_login; ?></p>
                     <p><?php echo $user->user_email; ?></p>
-                    <p><?php echo get_user_meta($user->ID, 'address', true); ?></p>
+                    <p></p><?php echo get_user_meta($user->ID, 'address', true); ?></p>
                     <p><?php echo get_user_meta($user->ID, 'phone_number', true); ?></p>
+                    
+                    <p><img src="<?php echo get_user_meta($user->ID, 'image', true); ?>" alt=""></p>
                 </div>
             </div>
    

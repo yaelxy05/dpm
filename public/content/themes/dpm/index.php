@@ -3,8 +3,6 @@
 get_header();
 ?>
 
-
-
 <main class="main">
     
     <div class="main_box">

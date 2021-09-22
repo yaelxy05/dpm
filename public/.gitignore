@@ -11,7 +11,7 @@ composer.lock
 .htaccess
 
 wp
-
+Brouillon/*
 wp-config.php
 wp-config.php.bak
 
@@ -26,5 +26,3 @@ content/themes/*
 content/plugins/*
 !content/plugins/dpm
 #!/content/plugins/custom_plugin
-
-
