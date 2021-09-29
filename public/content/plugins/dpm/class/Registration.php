@@ -78,18 +78,6 @@ class Registration
                 </td>
             </tr>
         </table>
-
-        <table class="form-table">
-            <tr>
-                <th><label for="avatar">Avatar</label></th>
-                <td>
-                    <img src="<?php echo esc_attr( get_the_author_meta( 'image', $user->ID ) ); ?>" style="height:50px;">
-                    <input type="file" name="image" id="image" value="<?php echo esc_attr( get_the_author_meta( 'image', $user->ID ) ); ?>" class="regular-text" />
-                     <input type='submit' class="button-primary" value="Upload Image" id="uploadimage"/><br />
-                    <span class="description">Please upload your image for your profile.</span>
-                </td>
-            </tr>
-        </table>
         <?php
         
     }
@@ -142,12 +130,6 @@ class Registration
             <label for="user_password">Mot de passe *</label>
             <input required type="password" name="user_password" id="user_password"
             class="input" value="" size ="20" autocapitalize="off">
-        </p>
-        <p>
-            <label for="avatar">Choose a profile picture:</label>
-            <input type="file"
-            id="avatar" name="user_avatar"
-            accept="image/png, image/jpeg" class="input" enctype="multipart/form-data">
         </p>
         ';  
 
@@ -222,10 +204,6 @@ class Registration
         // Get the address and use update post meta for this user
         $address = filter_input(INPUT_POST, 'user_address');
         update_user_meta( $userId, 'address', $address );
-
-        // Get the address and use update post meta for this user
-        $avatar = filter_input(INPUT_POST, 'user_avatar');
-        update_user_meta( $userId, 'avatar', $avatar );
 
         // enregistrement du mot de passe choisi par l'user
         $password = filter_input(INPUT_POST, 'user_password');
