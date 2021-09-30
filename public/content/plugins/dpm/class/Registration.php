@@ -97,7 +97,6 @@ class Registration
 
         update_user_meta( $user_id, 'address', $_POST['address'] );
 
-        update_user_meta( $user_id, 'image', $_POST['image'] );
         
     }
 

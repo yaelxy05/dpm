@@ -31,11 +31,11 @@
     "activate-plugins": "wp plugin activate --all",
     "activate-htaccess": "wp rewrite structure '/%year%/%monthnum%/%postname%/' --hard",
     "chmod": [
-      "sudo chgrp -R www-data .",
-      "sudo find . -type f -exec chmod 664 {} +",
-      "sudo find . -type d -exec chmod 775 {} +",
+      "chgrp -R jdjh3261 .",
+      "find . -type f -exec chmod 644 {} +",
+      "find . -type d -exec chmod 755 {} +",
       "touch .htaccess",
-      "sudo chmod 775 .htaccess"
+      "chmod 775 .htaccess"
     ],
     "wp-install-application-passwords": "wp plugin install application-passwords --activate",
     "wp-install-jwt": "wp plugin install jwt-authentication-for-wp-rest-api --activate",
