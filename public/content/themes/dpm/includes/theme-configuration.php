@@ -33,7 +33,7 @@ function dpm_menu_link_class($attrs)
 }
 
 /**
- * Add icons
+ * Add icons 
  */
 
 function nav_menu_add_search( $items, $args ) {
