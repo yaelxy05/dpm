@@ -41,7 +41,7 @@ wp_reset_postdata();
                 $avatar = get_user_meta($user->ID, 'avatar', true);
             ?>
 
-            <a href=" <?php get_home_url() . '/create-post' ?>"><button class="main_sale-box--button">+ Ajoutez un produit</button></a>
+            <a href=" <?php echo get_home_url() . '/create-post'; ?>"><button class="main_sale-box--button">+ Ajoutez un produit</button></a>
             <div class="main_dataUser">
                 <h2 class="main_info">Informations du compte</h2>
                 <div class="main_boxP">

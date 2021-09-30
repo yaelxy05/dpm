@@ -23,6 +23,7 @@ class Router
         add_rewrite_rule('^contact$', 'index.php?is_contact=1', 'top');
         add_rewrite_rule('^register$', 'index.php?is_register=1', 'top');
         add_rewrite_rule('^login$', 'index.php?is_login=1', 'top');
+        add_rewrite_rule('^create-post$', 'index.php?is_createPost=1', 'top');
         add_rewrite_rule('user/?.*','index.php?customRoutes=true',
 
             // la règle se mettre en haut de la pile de priorité (donc sera prioritaire)
@@ -41,6 +42,7 @@ class Router
             $query_vars[] = 'is_contact';
             $query_vars[] = 'is_register';
             $query_vars[] = 'is_login';
+            $query_vars[] = 'is_createPost';
             $query_vars[] = 'customRoutes';
             return $query_vars;
         });
@@ -115,6 +117,14 @@ class Router
                // we say to Wordpress what touch he has to change
                 $template =  get_stylesheet_directory() . '/templates/contact.php';
             }
+
+            $isCreatePost = get_query_var('is_createPost');
+            if ($isCreatePost) {
+              
+               // we say to Wordpress what touch he has to change
+                $template =  get_stylesheet_directory() . '/templates/createPost.php';
+            }
+
             $customRoutes = get_query_var('customRoutes');
             if($customRoutes) {
                //  STEP WP PLUGIN ROUTING une custom route a été détecté, nous prenons la main
