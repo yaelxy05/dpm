@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+/*!
+Theme Name: Otest
+Text Domain: otest
+Description: Correction OProfile
+Author: yaelxy05
+Documentation: https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
+*/
+@import 'base/reset';
+@import 'utils/variables';
+@import 'utils/mixins';
+@import 'pages/navBar';
+@import 'pages/home';
+@import 'pages/footer';
+@import 'pages/gender';
+@import 'pages/cart';
+@import 'pages/login';
+@import 'pages/register';
+@import 'pages/userSpace';
+@import 'pages/command';
+@import 'pages/singleClothing';
+@import 'pages/contact';
+@import 'pages/404';
+@import 'pages/createPost';
+@import 'pages/flashMessage';
+@import 'pages/contactPage';
+
+
+
+body {
+    //background: rgb(53, 30, 114);
+    background:$color-background;
+}

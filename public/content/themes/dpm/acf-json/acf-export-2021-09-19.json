@@ -1,0 +1,159 @@
+[
+  {
+    "key": "group_614775df15e81",
+    "title": "Inscription",
+    "fields": [
+      {
+        "key": "field_614775eb48b9a",
+        "label": "Nom d'utilisateur",
+        "name": "user_login",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_6147760448b9b",
+        "label": "nom",
+        "name": "nom",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_6147761148b9c",
+        "label": "Prénom",
+        "name": "prenom",
+        "type": "text",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      },
+      {
+        "key": "field_6147761b48b9d",
+        "label": "Mot de passe",
+        "name": "user_pass",
+        "type": "password",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_6147762e48b9e",
+        "label": "Confirmation du mot de passe",
+        "name": "confirmation_du_mot_de_passe",
+        "type": "password",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "placeholder": "",
+        "prepend": "",
+        "append": ""
+      },
+      {
+        "key": "field_6147764348b9f",
+        "label": "Ajout d'avatar",
+        "name": "ajout_davatar",
+        "type": "image",
+        "instructions": "",
+        "required": 0,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "return_format": "array",
+        "preview_size": "thumbnail",
+        "library": "all",
+        "min_width": "",
+        "min_height": "",
+        "min_size": "",
+        "max_width": "",
+        "max_height": "",
+        "max_size": "",
+        "mime_types": ""
+      },
+      {
+        "key": "field_61477a075bdc5",
+        "label": "Email",
+        "name": "user_email",
+        "type": "text",
+        "instructions": "",
+        "required": 1,
+        "conditional_logic": 0,
+        "wrapper": {
+          "width": "",
+          "class": "",
+          "id": ""
+        },
+        "default_value": "",
+        "placeholder": "",
+        "prepend": "",
+        "append": "",
+        "maxlength": ""
+      }
+    ],
+    "location": [
+      [
+        {
+          "param": "post_type",
+          "operator": "==",
+          "value": "post"
+        }
+      ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": ""
+  }
+]

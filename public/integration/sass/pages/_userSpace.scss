@@ -1,0 +1,96 @@
+.main {
+    min-height: 100%;
+    @include flexcenter;
+    flex-direction: column;
+    margin: $gutter +4  0;
+    @include for-phone-only {
+        margin: 2rem 0;
+    }
+    .main_sale-box--button {
+        margin: 2rem 0;
+        height: 4rem;
+        width: 100%;
+        border-radius: 5px;
+        @include buttonGreen;
+    }
+    .main_h2 {
+            text-align: center;
+            padding: 1rem 0;
+            font-weight: 700;
+    }
+    .main_dataUser {
+        @include flexcenter;
+        flex-direction: column;
+        background-color: $background-input;
+        box-shadow: 1px 1px 3px $color-placeholder;
+        border-radius: 15px; 
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+        text-align: center;
+
+        h2 {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+        }
+
+        .main_boxP {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            p {
+                text-align: center;
+                margin: 0.5rem 0;
+            }
+        }
+    }
+    .main_h1 {
+        @include h1Main;
+        margin: $gutter  0;
+    }
+
+    .main_wrapper-user {
+        @include flexcenter;
+        flex-wrap: wrap;
+        width: 80%;
+        
+        padding: 2rem;
+        
+
+        .main_sale-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 20rem;
+            width: 15rem;
+            border: $color-boy solid 0.2px;
+            border-radius: 10px;
+            box-shadow: 2px 1px 12px rgba($color: #cfcfcf, $alpha: 1.0);
+            margin: 2rem;
+            .wp-post-image {
+                width: 12rem;
+                height: auto;
+            }
+            .main_sale-box--h2 {
+                color: $color-menu;
+                text-align: center;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                font-weight: 700;
+            }
+            .main_sale-box--p {
+                height: 4rem;
+                font-weight: 700;
+                color: $color-menu;
+                text-align: center;
+                padding-right: 1rem;
+                padding-top: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+    
+}

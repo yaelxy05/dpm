@@ -1,0 +1,162 @@
+.main {
+    width: 100%;
+    @include for-phone-only {
+        min-height: 100vh;
+    }
+
+    .main_box {
+        flex-direction: column;
+        @include flexcenter;
+        @include for-phone-only {
+            margin-left: 0;
+        }
+
+        .main_banner {
+            height: auto;
+            width: 80%;
+        }
+
+        .main_h1 {
+            @include h1Main;
+        }
+        .main_post {
+            @include flexcenter;
+            flex-wrap: wrap;
+            width: 100%;
+            @include for-phone-only {
+                flex-direction: column;
+            }
+            
+            .main_wrapper {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                height: 22rem;
+                width: 15rem;
+                border: $color-boy solid 0.2px;
+                border-radius: 10px;
+                box-shadow: 2px 1px 12px rgba($color: #cfcfcf, $alpha: 1.0);
+                margin: 2rem;
+
+        
+                .main_img {
+                    height: 17rem;
+                    width: 100%;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;    
+                }
+        
+                .main_h2 {
+                    color: $color-menu;
+                    text-align: center;
+                    padding-top: 1rem;
+                }
+                
+                p {
+                    text-align: right;
+                    padding-right: 1rem;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $color-menu;
+                    font-weight: 600;
+                }
+                .main_detail-box {
+                    @include flexcenter;
+                }
+            }
+        }
+        .main_select--box {
+            width: 80%;
+            min-height: 90vh;
+            margin: 2rem 0;
+
+            a {
+                text-decoration: none;
+                color: $color-text-white;
+            }
+
+            @include for-tablet-portrait-up {
+                min-height: 80vh;
+            }
+            @include for-phone-only {
+                min-height: 60vh;
+            }
+
+            .main_select {
+                height:15rem;
+                display: flex;
+                @include for-phone-only {
+                    height: 10rem;
+                }
+                @include for-tablet-portrait-up {
+                    height: 12rem;
+                }
+
+                .main_img {
+                    height: 15rem;
+                    width: 60%;
+                    @include for-phone-only {
+                        height: 10rem;
+                    }
+                    @include for-tablet-portrait-up {
+                        height: 12rem;
+                    }
+                }
+
+                .main_img--girl {
+                    background-image: url('../images/banner/pexels-eren-li-7168995.jpg');
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                .main_img--boy {
+                    background-image: url('../images/banner/pexels-ketut-subiyanto-4545166.jpg');
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                .main_img--baby {
+                    background-image: url('../images/banner/pexels-pixabay-265987.jpg');
+                    background-size: cover;
+                    background-position: center;
+                }
+                .main_select--textbox {
+                    height: 15rem;
+                    width: 40%;
+                    color: $color-text-white;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+
+                    .main_select--text {
+                        text-decoration: none;
+                    }
+                    
+                    @include flexcenter;
+                    @include for-phone-only {
+                        height: 10rem;
+                        font-size: 1rem;
+                    }
+                    @include for-tablet-portrait-up {
+                        height: 12rem;
+                    }
+                }
+
+                .girl--text {
+                    background: $color-girl;
+                }
+
+                .boy--text {
+                    background: $color-boy;
+                }
+
+                .baby--text {
+                    background: $color-baby;
+                }
+            }
+        }
+    }
+    
+}

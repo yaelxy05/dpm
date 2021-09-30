@@ -1,0 +1,87 @@
+.main {
+    min-height: 100%;
+    @include flexcenter;
+    flex-direction: column;
+    margin: $gutter +4  0;
+    @include for-phone-only {
+        margin: 2rem 0;
+    }
+
+    .main_h1 {
+        @include h1Main;
+        margin: $gutter  0;
+    }
+
+    .main_register--input-box {
+        background-color: $background-input;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25rem;
+        min-height: 80vh;
+        margin: $gutter  0;
+        @include for-phone-only {
+            width: 13rem;
+        }
+
+        .main_input{
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0;
+
+            input {
+                height: 2.3rem;
+                width: 20rem;
+                border: none;
+                border-bottom: solid 3px rgb(192, 192, 192);
+                padding-left: 0.5rem;
+                
+                @include for-phone-only {
+                    width: 10rem;
+                }
+
+                &::placeholder {
+                    font-weight: bold;
+                    color: $color-placeholder;
+                }
+
+                &:focus {
+                    outline: none;
+                    border-bottom: solid 3px $color-girl;
+                }
+            }
+        }
+
+        .main_loginBottom-box {
+            display: flex;
+            justify-content: space-evenly;
+            width: 20rem;
+            padding: 1rem 0 0;
+            @include for-phone-only {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 10rem;
+            }
+
+            .main_link {
+                font-weight: bold;
+                flex: 2;
+
+                p {
+                    padding: 0.5rem 0;
+                }
+            }
+
+            #button_connexion {
+                height: 3.4rem;
+                width: 7.3rem;
+                margin-top: 0.8rem;
+                border-radius: 5px;
+                @include buttonGreen;
+            }
+        }
+    }
+}

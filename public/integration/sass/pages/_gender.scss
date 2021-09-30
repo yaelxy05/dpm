@@ -1,0 +1,106 @@
+.main_box {
+  width: 100%;
+}
+
+.main_post { 
+  max-width: 1600px;
+  padding-left: 0%;
+  margin-left: 0em;
+
+}
+
+//Accordion
+.container {
+max-width: 200px;
+
+}
+button.accordion {
+width: 100%;
+background-color: white;
+border: none;
+border-bottom: 1px solid #F4CFDF;
+outline: none;
+text-align: left;
+padding: 15px 20px;
+font-size: 1em;
+color: #5784BA;
+cursor: pointer;
+transition: background-color 0.2s linear;
+}
+button.accordion:after {
+font-family: FontAwesome;
+content: '\f107';
+font-family: "fontawesome";
+font-size: 1em;
+float: right;
+}
+button.accordion.is-open:after {
+content: '\f106';
+}
+button.accordion:hover, button.accordion.is-open {
+background-color:#F4CFDF;
+}
+.accordion-content {
+background-color: white;
+border-left: 1px solid whitesmoke;
+border-right: 1px solid whitesmoke;
+padding: 0 20px;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-in-out;
+}
+.filter-button {
+width: 100%;
+background-color: white;
+border: none;
+border-bottom: 1px solid #F4CFDF;
+outline: none;
+text-align: left;
+padding: 0.9em;
+font-size: 1em;
+color: pink;
+cursor: pointer;
+
+}
+
+//Sidebar
+.sidebar {
+// padding-top: 3em;
+// float: left;
+// position: absolute;
+// left: 1em;
+// @include for-phone-only {
+//  position: relative;
+// }
+padding-top: 1em;
+
+}
+
+.display-sidebar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  
+  @include for-phone-only {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @include for-tablet-portrait-up {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @include for-tablet-landscape-up {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @include for-desktop-up {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+}

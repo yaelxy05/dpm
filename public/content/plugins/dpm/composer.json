@@ -1,0 +1,13 @@
+{
+  "autoload": {
+    "psr-4": {
+      "DPM\\": "./class"
+    }
+  },
+  "config": {
+    "vendor-dir": "vendor-dpm"
+  },
+  "require": {
+    "altorouter/altorouter": "^2.0"
+  }
+}

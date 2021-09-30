@@ -1,0 +1,3 @@
+path: /var/www/html/apo/il-etait-plusieurs-doigts/public/wp
+apache_modules:
+  - mod_rewrite
