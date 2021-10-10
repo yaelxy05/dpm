@@ -25,7 +25,7 @@ class Router
         add_rewrite_rule('^login$', 'index.php?is_login=1', 'top');
         add_rewrite_rule('^create-post$', 'index.php?is_createPost=1', 'top');
         add_rewrite_rule('user/?.*','index.php?customRoutes=true',
-
+        add_rewrite_rule('^mentions-legales$', 'index.php?is_mentions-legales=1', 'top');
             // la règle se mettre en haut de la pile de priorité (donc sera prioritaire)
             'top'
         );
@@ -44,6 +44,7 @@ class Router
             $query_vars[] = 'is_login';
             $query_vars[] = 'is_createPost';
             $query_vars[] = 'customRoutes';
+            $query_vars[] = 'is_mentions-legales';
             return $query_vars;
         });
 
@@ -56,6 +57,12 @@ class Router
               
                // we say to Wordpress what touch he has to change
                 $template =  get_stylesheet_directory() . '/templates/profile.php';
+            }
+            $isMentionsLegale = get_query_var('is_mentions-legales');
+            if ($isMentionsLegale) {
+              
+               // we say to Wordpress what touch he has to change
+                $template =  get_stylesheet_directory() . '/templates/mentions-legales.php';
             }
             // we get the "virtual" variable custom-route
             // same as :  $customRoute = filter_input(INPUT_GET, 'custom-route');

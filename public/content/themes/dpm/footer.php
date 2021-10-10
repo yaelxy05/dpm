@@ -6,9 +6,9 @@
 
     <nav class="footer-nav">
         <ul>
-            <li><a href="http://localhost/apo/il-etait-plusieurs-doigts/public/mentions-legales/">Mentions légales</a></li>
-            <li><a href="http://localhost/apo/il-etait-plusieurs-doigts/public/a-propos/">A propos</a></li>
-            <li><a href="http://localhost/apo/il-etait-plusieurs-doigts/public/contact/">Contact</a></li>
+            <li><a href="<?php echo get_home_url() . '/mentions-legales'; ?>">Mentions légales</a></li>
+            <li><a href="<?php echo get_home_url() . '/a-propos'; ?>">A propos</a></li>
+            <li><a href="<?php echo get_home_url() . '/contact'; ?>">Contact</a></li>
         </ul>
     </nav>
 
